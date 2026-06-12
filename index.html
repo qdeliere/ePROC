@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>DTSC — e-PROC Dashboard</title>
+  <style>
+    :root{
+      color-scheme:light;
+      --bg:#f8fafc;--border:#e2e8f0;--text:#1e293b;--muted:#64748b;
+      --accent:#f97316;--accent2:#3b82f6;
+      --go:#16a34a;--maybe:#d97706;--no:#dc2626;
+      --go-bg:#dcfce7;--maybe-bg:#fef3c7;--no-bg:#fee2e2;
+      --lucid:#2563EB;--lucid-bg:#DBEAFE;
+      --spark:#059669;--spark-bg:#D1FAE5;
+      --brain:#7C3AED;--brain-bg:#EDE9FE;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+
+    /* ── Header ── */
+    #app-header{background:#1e293b;color:#fff;padding:10px 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;flex-wrap:wrap}
+    .logo{font-weight:700;font-size:15px;letter-spacing:-.5px}
+    .logo span{color:var(--accent)}
+    .version-badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:2px 10px;font-size:11px;cursor:pointer;transition:background .15s;color:#fff}
+    .version-badge:hover{background:rgba(255,255,255,.28)}
+    .ro-badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);border-radius:12px;padding:2px 10px;font-size:11px}
+    #header-spacer{flex:1}
+    #data-status{font-size:11px;color:rgba(255,255,255,.55);max-width:320px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+    /* ── Error banner ── */
+    #error-banner{display:none;background:#fee2e2;color:#991b1b;border-bottom:1px solid #fecaca;padding:10px 20px;font-size:13px;font-weight:600}
+    #error-banner.visible{display:block}
+
+    /* ── Stats bar ── */
+    #stats-bar{background:#fff;border-bottom:1px solid var(--border);padding:8px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .stat-item{display:flex;align-items:center;gap:8px}
+    .stat-label{color:var(--muted);font-size:12px}
+    .stat-value{font-weight:700;font-size:20px}
+    .stat-value.go-c{color:var(--go)}.stat-value.maybe-c{color:var(--maybe)}
+    .stat-sep{width:1px;height:24px;background:var(--border)}
+    #pole-stats{display:flex;gap:10px;flex-wrap:wrap}
+    .pole-pill{border-radius:12px;padding:2px 10px;font-size:12px;font-weight:600}
+    .pole-pill.lucid{background:var(--lucid-bg);color:var(--lucid)}
+    .pole-pill.spark{background:var(--spark-bg);color:var(--spark)}
+    .pole-pill.brain{background:var(--brain-bg);color:var(--brain)}
+    #last-sync{font-size:11px;color:var(--muted);margin-left:auto}
+
+    /* ── Controls ── */
+    #controls{padding:10px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:#fff;border-bottom:1px solid var(--border)}
+    .filter-btn{border:1px solid var(--border);background:#fff;border-radius:20px;padding:4px 14px;font-size:12px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:5px}
+    .filter-btn.active{background:var(--text);color:#fff;border-color:var(--text)}
+    .filter-btn .badge{background:rgba(0,0,0,.1);border-radius:10px;padding:0 5px;font-size:11px;font-weight:700}
+    .filter-btn.active .badge{background:rgba(255,255,255,.2)}
+    #result-count{font-size:12px;color:var(--muted);margin-left:auto}
+
+    /* ── Recherche ── */
+    #search-bar{padding:10px 20px;background:#fff;border-bottom:2px solid var(--border)}
+    #search-wrap{display:flex;align-items:center;gap:10px;background:#f8fafc;border:1.5px solid var(--border);border-radius:8px;padding:8px 14px;transition:border-color .15s;max-width:100%}
+    #search-wrap:focus-within{border-color:var(--accent2);background:#fff}
+    .search-icon{color:var(--muted);font-size:16px;flex-shrink:0}
+    #search-input{border:none;background:transparent;font-size:14px;color:var(--text);outline:none;flex:1;min-width:0}
+    #search-input::placeholder{color:#94a3b8}
+    #search-clear{background:none;border:none;color:var(--muted);cursor:pointer;font-size:14px;padding:0;line-height:1;display:none}
+    #search-clear.visible{display:block}
+    .search-hint{font-size:11px;color:#94a3b8;white-space:nowrap;flex-shrink:0}
+
+    /* ── Table ── */
+    #table-container{overflow-x:auto;padding:0 20px 24px}
+    #offers-table{width:100%;border-collapse:collapse;margin-top:14px}
+    #offers-table th{background:#f1f5f9;border:1px solid var(--border);padding:9px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+    #offers-table td{border:1px solid var(--border);padding:11px 12px;vertical-align:top;background:#fff}
+    #offers-table tr:hover td{background:#fafbfc}
+
+    .emp-name{font-weight:700;font-size:14px;margin-bottom:3px}
+    .emp-ref{font-family:'SF Mono','Fira Code',monospace;font-size:11px;color:var(--muted);margin-bottom:6px;word-break:break-all}
+    .sector-badge{display:inline-block;border-radius:12px;padding:2px 8px;font-size:11px;font-weight:600;margin-bottom:7px}
+    .emp-meta{display:flex;flex-direction:column;gap:2px;font-size:12px;color:var(--muted)}
+
+    .offer-title{font-weight:700;font-size:13px;margin-bottom:5px;line-height:1.4}
+    .offer-desc{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:7px}
+    .tags{display:flex;flex-wrap:wrap;gap:4px}
+    .tag{background:#f1f5f9;color:var(--muted);border-radius:4px;padding:2px 7px;font-size:11px}
+
+    .skill-item{display:flex;align-items:flex-start;gap:6px;margin-bottom:5px;font-size:12px;line-height:1.3}
+    .skill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:3px}
+    .skill-dot.hard{background:var(--accent)}.skill-dot.soft{background:var(--accent2)}
+    .skill-legend{display:flex;gap:10px;margin-top:7px;font-size:11px;color:var(--muted)}
+    .skill-legend span{display:flex;align-items:center;gap:4px}
+
+    .dl-days{font-size:22px;font-weight:700}
+    .dl-days.urgent{color:var(--no)}.dl-days.soon{color:var(--maybe)}.dl-days.ok{color:var(--go)}
+    .dl-bar{height:4px;background:#e2e8f0;border-radius:2px;margin:5px 0;overflow:hidden}
+    .dl-bar-fill{height:100%;border-radius:2px}
+    .dl-date{font-size:12px;color:var(--muted)}
+    .dl-chip{display:inline-block;border-radius:12px;padding:2px 8px;font-size:11px;font-weight:600;margin-top:4px}
+
+    .dtsc-score{font-size:24px;font-weight:700}
+    .dtsc-bar{height:6px;background:#e2e8f0;border-radius:3px;margin:5px 0;overflow:hidden}
+    .dtsc-bar-fill{height:100%;border-radius:3px}
+    .theme-chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+    .theme-chip{border-radius:12px;padding:2px 9px;font-size:11px;font-weight:600;white-space:nowrap}
+    .theme-chip.chip-lucid{background:var(--lucid-bg);color:var(--lucid)}
+    .theme-chip.chip-spark{background:var(--spark-bg);color:var(--spark)}
+    .theme-chip.chip-brain{background:var(--brain-bg);color:var(--brain)}
+    .theme-chip.chip-default{background:#f1f5f9;color:var(--muted)}
+
+    .members-grid{display:flex;flex-direction:column;gap:7px;min-width:250px}
+    .member-card{display:flex;align-items:flex-start;gap:6px;padding:6px 8px;background:#f8fafc;border-radius:6px;border:1px solid var(--border)}
+    .member-photo-wrap{flex-shrink:0}
+    .member-photo{width:30px;height:30px;border-radius:50%;object-fit:cover;background:#e2e8f0;display:block;border:2px solid var(--accent)}
+    .member-initial{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px}
+    .member-info{flex:1;min-width:0}
+    .member-name{font-weight:700;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:1px}
+    .member-role{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:4px}
+    .member-skills-mini{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:4px}
+    .ms-chip{border-radius:3px;padding:1px 5px;font-size:10px;line-height:1.4}
+    .ms-chip.matched{background:rgba(249,115,22,.12);color:#c2410c;font-weight:700}
+    .ms-chip.unmatched{background:#f1f5f9;color:var(--muted)}
+    .cv-date-line{font-size:10px;color:var(--muted);display:flex;align-items:center;gap:4px;margin-top:2px}
+    .member-score-col{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0;padding-top:2px}
+    .member-score-pct{font-size:14px;font-weight:700;color:var(--accent);line-height:1;margin-bottom:3px}
+    .member-bar{width:48px;height:3px;background:#e2e8f0;border-radius:2px;overflow:hidden}
+    .member-bar-fill{height:100%;border-radius:2px;background:var(--accent)}
+
+    .verdict-badge{display:inline-flex;align-items:center;gap:5px;border-radius:8px;padding:5px 11px;font-weight:700;font-size:13px;margin-bottom:9px}
+    .verdict-badge.go{background:var(--go-bg);color:var(--go)}
+    .verdict-badge.maybe{background:var(--maybe-bg);color:#92400e}
+    .verdict-badge.no{background:var(--no-bg);color:var(--no)}
+    .see-dossier{display:inline-flex;align-items:center;gap:4px;color:var(--accent2);font-size:12px;text-decoration:none;border:1px solid var(--accent2);border-radius:5px;padding:4px 10px;transition:all .15s}
+    .see-dossier:hover{background:var(--accent2);color:#fff}
+
+    /* ── Modal versions ── */
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s}
+    .modal-overlay.active{opacity:1;pointer-events:auto}
+    .modal{background:#fff;border-radius:12px;padding:24px;max-width:560px;width:92%;max-height:82vh;overflow-y:auto;transform:translateY(16px);transition:transform .2s;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+    .modal-overlay.active .modal{transform:translateY(0)}
+    .modal h2{font-size:18px;font-weight:700;margin-bottom:14px}
+    .modal-actions{display:flex;gap:9px;margin-top:16px;justify-content:flex-end}
+    .btn-secondary{background:#fff;color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 18px;font-size:14px;cursor:pointer}
+    .btn-secondary:hover{background:#f8fafc}
+    .ver-entry{border-left:3px solid var(--border);padding-left:14px;margin-bottom:16px}
+    .ver-entry:first-child{border-color:var(--accent)}
+    .ver-entry .ver-num{font-weight:700;font-size:14px;color:var(--accent)}
+    .ver-entry .ver-date{font-size:12px;color:var(--muted);margin-bottom:4px}
+    .ver-entry ul{font-size:13px;color:var(--muted);padding-left:16px}
+
+    #empty-state{text-align:center;padding:56px 20px;color:var(--muted);display:none}
+    #empty-state.visible{display:block}
+    .hidden{display:none!important}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    ::-webkit-scrollbar{width:5px;height:5px}
+    ::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+  </style>
+</head>
+<body>
+<div aria-live="polite" class="sr-only" id="sr-announcer"></div>
+
+<header id="app-header">
+  <div class="logo">DTSC <span>e-PROC</span></div>
+  <button class="version-badge" id="version-btn" title="Historique des versions">v—</button>
+  <span class="ro-badge" title="Site publié en lecture seule — les données sont mises à jour par le sync interne DTSC">👁 Lecture seule</span>
+  <div id="header-spacer"></div>
+  <span id="data-status"></span>
+</header>
+
+<div id="error-banner" role="alert"></div>
+
+<div id="stats-bar">
+  <div class="stat-item"><span class="stat-label">Offres</span><span class="stat-value" id="stat-total">0</span></div>
+  <div class="stat-sep"></div>
+  <div class="stat-item"><span class="stat-label">✅ GO</span><span class="stat-value go-c" id="stat-go">0</span></div>
+  <div class="stat-sep"></div>
+  <div class="stat-item"><span class="stat-label">🤝 À étudier</span><span class="stat-value maybe-c" id="stat-maybe">0</span></div>
+  <div class="stat-sep"></div>
+  <div id="pole-stats"></div>
+  <span id="last-sync">Dernière sync : —</span>
+</div>
+
+<div id="controls">
+  <button class="filter-btn" data-filter="all">Toutes <span class="badge" id="badge-all">0</span></button>
+  <button class="filter-btn active" data-filter="active">GO + À étudier <span class="badge" id="badge-active">0</span></button>
+  <button class="filter-btn" data-filter="go">✅ GO <span class="badge" id="badge-go">0</span></button>
+  <button class="filter-btn" data-filter="maybe">🤝 À étudier <span class="badge" id="badge-maybe">0</span></button>
+  <button class="filter-btn" data-filter="no">🚫 No Go <span class="badge" id="badge-no">0</span></button>
+  <span id="result-count"></span>
+</div>
+
+<div id="search-bar">
+  <div id="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="search" id="search-input" placeholder="Rechercher une offre…" autocomplete="off"
+           aria-label="Rechercher dans les colonnes Employeur, Description, Compétences" />
+    <button id="search-clear" title="Effacer la recherche" aria-label="Effacer">✕</button>
+    <span class="search-hint">Employeur · Description · Compétences</span>
+  </div>
+</div>
+
+<div id="table-container">
+  <div id="empty-state">
+    <div style="font-size:44px;margin-bottom:10px">📭</div>
+    <div style="font-size:15px;font-weight:600;margin-bottom:6px">Aucune offre trouvée</div>
+    <div>Modifiez votre filtre ou votre recherche.</div>
+  </div>
+  <table id="offers-table" aria-label="Offres e-Procurement">
+    <thead>
+      <tr>
+        <th style="min-width:190px">Employeur</th>
+        <th style="min-width:210px">Description</th>
+        <th style="min-width:170px">Compétences</th>
+        <th style="min-width:105px;cursor:pointer" id="th-deadline" title="Cliquez pour trier">Deadline ↕</th>
+        <th style="min-width:130px;cursor:pointer" id="th-score" title="Cliquez pour trier">Matching DTSC ↕</th>
+        <th style="min-width:265px">Membres DTSC</th>
+        <th style="min-width:125px">Verdict</th>
+      </tr>
+    </thead>
+    <tbody id="offers-tbody"></tbody>
+  </table>
+</div>
+
+<div class="modal-overlay" id="modal-version" role="dialog" aria-modal="true" aria-labelledby="modal-ver-title">
+  <div class="modal">
+    <h2 id="modal-ver-title">📋 Historique des versions</h2>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:14px">Site publié — mis à jour automatiquement après chaque sync interne DTSC.</p>
+    <div id="version-history-content"></div>
+    <div class="modal-actions"><button class="btn-secondary" id="version-close">Fermer</button></div>
+  </div>
+</div>
+
+<script src="core.js"></script>
+<script>
+'use strict';
+/* ============================================================
+ * DTSC e-PROC — version publiée (lecture seule)
+ * Données : data.json, régénéré après chaque sync interne Cowork.
+ * Logique : core.js (testé unitairement via tests/run-tests.js).
+ * ============================================================ */
+
+const SITE_VERSION_HISTORY = [
+  { ver:'1.0.0', date:'12/06/2026', items:[
+    'Première publication GitHub Pages (lecture seule)',
+    'Données issues du sync interne v0.5.9 (12/06/2026)',
+    'Logique extraite dans core.js + tests unitaires Node',
+  ]},
+];
+
+let DATA = null, OFFERS = [], currentFilter = 'active', currentSearch = '', currentSort = {col:null, dir:'asc'};
+
+function showError(msg){
+  const b = document.getElementById('error-banner');
+  b.textContent = '⚠️ ' + msg;
+  b.classList.add('visible');
+}
+
+function getFiltered(){
+  let list = EPROC.filterOffers(OFFERS, currentFilter, currentSearch);
+  if(currentSort.col) list = EPROC.sortList(list, currentSort.col, currentSort.dir);
+  return list;
+}
+
+function renderOffers(){
+  const filtered = getFiltered();
+  const tbody = document.getElementById('offers-tbody');
+  const empty = document.getElementById('empty-state');
+  const ctx = { matrice: DATA.matrice, members: DATA.members };
+  try{
+    if(filtered.length === 0){ tbody.innerHTML=''; empty.classList.add('visible'); }
+    else { empty.classList.remove('visible'); tbody.innerHTML = filtered.map(o=>EPROC.renderOfferRow(o, ctx)).join(''); }
+  }catch(e){
+    showError('Erreur de rendu : ' + e.message);
+    return;
+  }
+  document.getElementById('result-count').textContent = filtered.length + ' offre' + (filtered.length!==1?'s':'') + ' affichée' + (filtered.length!==1?'s':'');
+  updateBadges();
+  const sr = document.getElementById('sr-announcer'); if(sr) sr.textContent = filtered.length + ' offres affichées';
+}
+
+function updateStats(){
+  document.getElementById('stat-total').textContent = OFFERS.length;
+  document.getElementById('stat-go').textContent = OFFERS.filter(o=>o.verdict==='go').length;
+  document.getElementById('stat-maybe').textContent = OFFERS.filter(o=>o.verdict==='maybe').length;
+  // pôles
+  const counts = {lucid:0, spark:0, brain:0};
+  for(const o of OFFERS){
+    const poles = new Set(EPROC.getThemesForOffer(o, DATA.matrice).map(t=>t.pole));
+    for(const p of poles) if(counts[p]!==undefined) counts[p]++;
+  }
+  document.getElementById('pole-stats').innerHTML = Object.entries(counts)
+    .filter(([,v])=>v>0)
+    .map(([k,v])=>'<span class="pole-pill '+k+'">'+k.toUpperCase()+' · '+v+'</span>').join('');
+}
+
+function updateBadges(){
+  const ngo = OFFERS.filter(o=>o.verdict==='go').length;
+  const nmay = OFFERS.filter(o=>o.verdict==='maybe').length;
+  const nno = OFFERS.filter(o=>o.verdict==='no').length;
+  document.getElementById('badge-all').textContent = OFFERS.length;
+  document.getElementById('badge-active').textContent = ngo + nmay;
+  document.getElementById('badge-go').textContent = ngo;
+  document.getElementById('badge-maybe').textContent = nmay;
+  document.getElementById('badge-no').textContent = nno;
+}
+
+function init(data){
+  const v = EPROC.validateData(data);
+  if(!v.ok){
+    console.error('[validateData]', v.errors);
+    showError('Données invalides — ' + v.errors[0] + (v.errors.length>1 ? ' (+' + (v.errors.length-1) + ' autres, voir console)' : ''));
+    if(!data || !Array.isArray(data.offers)) return; // irrécupérable
+  }
+  DATA = data;
+  OFFERS = data.offers;
+  document.getElementById('version-btn').textContent = 'v' + (data.meta.siteVersion || '1.0.0');
+  const ls = data.meta.lastSync ? new Date(data.meta.lastSync) : null;
+  document.getElementById('last-sync').textContent = 'Dernière sync : ' + (ls && !isNaN(ls) ? ls.toLocaleString('fr-BE') : '—');
+  document.getElementById('data-status').textContent = 'Données sync interne v' + (data.meta.artifactVersion || '?');
+  renderOffers(); updateStats();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Listeners (indépendants du chargement des données)
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+    currentFilter = btn.dataset.filter;
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    if(DATA) renderOffers();
+  }));
+  const dSearch = EPROC.debounce(v => { currentSearch = v; if(DATA) renderOffers(); }, 280);
+  const searchInput = document.getElementById('search-input');
+  const searchClear = document.getElementById('search-clear');
+  searchInput.addEventListener('input', e => {
+    dSearch(e.target.value);
+    searchClear.classList.toggle('visible', e.target.value.length > 0);
+  });
+  searchClear.addEventListener('click', () => {
+    searchInput.value=''; currentSearch='';
+    searchClear.classList.remove('visible');
+    if(DATA) renderOffers(); searchInput.focus();
+  });
+  function bindSort(thId, col){
+    document.getElementById(thId).addEventListener('click', () => {
+      if(currentSort.col === col) currentSort.dir = currentSort.dir==='asc' ? 'desc' : 'asc';
+      else currentSort = {col, dir:'asc'};
+      if(DATA) renderOffers();
+    });
+  }
+  bindSort('th-deadline','deadline'); bindSort('th-score','score');
+  document.getElementById('version-btn').addEventListener('click', () => {
+    document.getElementById('version-history-content').innerHTML = SITE_VERSION_HISTORY
+      .map(v=>'<div class="ver-entry"><div class="ver-num">v'+EPROC.esc(v.ver)+'</div><div class="ver-date">'+EPROC.esc(v.date)+'</div><ul>'+v.items.map(i=>'<li>'+EPROC.esc(i)+'</li>').join('')+'</ul></div>').join('');
+    document.getElementById('modal-version').classList.add('active');
+  });
+  document.getElementById('version-close').addEventListener('click', () => document.getElementById('modal-version').classList.remove('active'));
+  document.querySelectorAll('.modal-overlay').forEach(ov=>ov.addEventListener('click', e=>{ if(e.target===ov) ov.classList.remove('active'); }));
+
+  // Chargement données — cache-buster pour toujours refléter le dernier sync
+  fetch('data.json?t=' + Date.now(), {cache:'no-store'})
+    .then(r => { if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(init)
+    .catch(e => {
+      console.error('[fetch data.json]', e);
+      showError('Impossible de charger les données (' + e.message + '). Réessayez dans quelques minutes ou contactez quentin.deliere@dtsc.be.');
+    });
+
+  if(new URLSearchParams(location.search).get('debug')==='tests') setTimeout(runBrowserTests, 800);
+});
+
+// ── Smoke tests navigateur — ?debug=tests (la suite complète est dans tests/run-tests.js) ──
+function runBrowserTests(){
+  console.group('🧪 DTSC ePROC — smoke tests navigateur');
+  let passed=0, total=0;
+  const assert=(d,c)=>{ total++; if(c){passed++;console.log('✅',d);} else console.error('❌',d); };
+  assert('EPROC chargé', typeof EPROC==='object');
+  assert('DATA chargé', !!DATA);
+  assert('offres > 0', OFFERS.length>0);
+  assert('validateData ok', DATA && EPROC.validateData(DATA).ok);
+  assert('tbody rempli', document.querySelectorAll('#offers-tbody tr').length>0 || OFFERS.length===0);
+  assert('pas de "undefined" dans le rendu', !document.getElementById('offers-tbody').innerHTML.includes('undefined'));
+  assert('last-sync affiché', !document.getElementById('last-sync').textContent.includes('— Invalid'));
+  console.log('📊 ' + passed + '/' + total + ' tests passés');
+  console.groupEnd();
+  return {passed, total};
+}
+</script>
+</body>
+</html>

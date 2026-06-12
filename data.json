@@ -1,0 +1,882 @@
+{
+  "meta": {
+    "siteVersion": "1.0.0",
+    "artifactVersion": "0.5.9",
+    "lastSync": "2026-06-12T12:32:42.000Z",
+    "generatedAt": "2026-06-12T12:32:42.000Z",
+    "source": "Sync Cowork — emails ePROC (noreply@publicprocurement.be) + pages publicprocurement.be + CVs SharePoint"
+  },
+  "matrice": {
+    "poles": [
+      {
+        "id": "lucid",
+        "label": "LUCID — Architecture & Systèmes",
+        "color": "#2563EB",
+        "bg": "#DBEAFE"
+      },
+      {
+        "id": "spark",
+        "label": "SPARK — PM & Transformation",
+        "color": "#059669",
+        "bg": "#D1FAE5"
+      },
+      {
+        "id": "brain",
+        "label": "BRAIN — Data & Innovation",
+        "color": "#7C3AED",
+        "bg": "#EDE9FE"
+      }
+    ],
+    "themes": [
+      {
+        "id": "pm-it",
+        "label": "PM · IT & Digital",
+        "pole": "spark",
+        "keywords": [
+          "pmo",
+          "chef de projet",
+          "project manager",
+          "gestion de projet",
+          "programme",
+          "coordinateur",
+          "coordination",
+          "consultant it",
+          "consultance",
+          "transformation",
+          "strategie",
+          "digitalisation"
+        ]
+      },
+      {
+        "id": "pm-infra",
+        "label": "PM · Engin. & Infrastructure",
+        "pole": "spark",
+        "keywords": [
+          "ferroviaire",
+          "railway",
+          "infrastructure",
+          "infrabel",
+          "sncb",
+          "energie",
+          "chantier",
+          "genie civil",
+          "deploiement",
+          "accompagnement"
+        ]
+      },
+      {
+        "id": "agile",
+        "label": "Agile & Delivery",
+        "pole": "spark",
+        "keywords": [
+          "scrum",
+          "agile",
+          "product owner",
+          "backlog",
+          "sprint",
+          "kanban",
+          "safe",
+          "livraison agile",
+          "scrum master",
+          "coaching agile"
+        ]
+      },
+      {
+        "id": "lean",
+        "label": "Lean & Excellence",
+        "pole": "spark",
+        "keywords": [
+          "lean",
+          "six sigma",
+          "black belt",
+          "change management",
+          "conduite du changement",
+          "excellence operationnelle",
+          "continuous improvement"
+        ]
+      },
+      {
+        "id": "archi",
+        "label": "Architecture EA",
+        "pole": "lucid",
+        "keywords": [
+          "architecture",
+          "togaf",
+          "enterprise architecture",
+          "cartographie si",
+          "urbanisation",
+          "systeme information",
+          "systeme d information"
+        ]
+      },
+      {
+        "id": "ict",
+        "label": "ICT & Infrastructure",
+        "pole": "lucid",
+        "keywords": [
+          "cloud",
+          "infrastructure",
+          "devops",
+          "securite",
+          "microsoft",
+          "azure",
+          "reseau",
+          "systemes",
+          "it"
+        ]
+      },
+      {
+        "id": "dev",
+        "label": "Dev & Intégration",
+        "pole": "lucid",
+        "keywords": [
+          "developpement",
+          "software",
+          "integration",
+          "api",
+          "logiciel",
+          "maintenance applicative",
+          "implementation"
+        ]
+      },
+      {
+        "id": "data",
+        "label": "Data & BI",
+        "pole": "brain",
+        "keywords": [
+          "data",
+          "business intelligence",
+          "reporting",
+          "tableau de bord",
+          "analyse donnees",
+          "datawarehouse",
+          "power bi",
+          "bi"
+        ]
+      },
+      {
+        "id": "ai",
+        "label": "AI & Innovation",
+        "pole": "brain",
+        "keywords": [
+          "intelligence artificielle",
+          "machine learning",
+          "deep learning",
+          "nlp",
+          "llm",
+          "recherche",
+          "phd",
+          "data science",
+          "data scientist"
+        ]
+      }
+    ]
+  },
+  "kw": {
+    "go": [
+      "pmo",
+      "chef de projet",
+      "project manager",
+      "programme",
+      "transformation",
+      "architecture",
+      "togaf",
+      "prince2",
+      "agile",
+      "scrum",
+      "portfolio",
+      "gouvernance informatique",
+      "business analyst",
+      "consultant informatique",
+      "consultance",
+      "gestion de projet",
+      "gestion de programme",
+      "change management",
+      "conduite du changement",
+      "coordinateur",
+      "coordination",
+      "accompagnement",
+      "deploiement",
+      "strategie",
+      "digitalisation",
+      "systeme information",
+      "migration",
+      "gestion des risques",
+      "reporting"
+    ],
+    "maybe": [
+      "logiciel",
+      "maintenance",
+      "developpement",
+      "data",
+      "analyse",
+      "formation",
+      "digital",
+      "outil informatique",
+      "implementation",
+      "support",
+      "audit",
+      "securite",
+      "cloud",
+      "microsoft"
+    ],
+    "no": [
+      "ectd",
+      "pharma reglementaire",
+      "ema/",
+      "cesp",
+      "plateforme e-learning",
+      "medicament",
+      "clinique",
+      "chirurgie",
+      "medecin",
+      "infirmier",
+      "nettoyage",
+      "travaux",
+      "construction",
+      "batiment",
+      "securite physique"
+    ]
+  },
+  "members": [
+    {
+      "id": "mathieu-serruys",
+      "name": "Mathieu Serruys",
+      "role": "IT PM / PMO / Data Specialist",
+      "photo": "https://www.dtsc.be/wp-content/uploads/2024/10/2024-09-27-DTSC_A.-Delsoir-Photo_6180Web.jpg",
+      "kw": [
+        "pmo",
+        "chef de projet",
+        "project manager",
+        "it project management",
+        "data management",
+        "data infrastructure",
+        "data analysis",
+        "reporting",
+        "business analyst",
+        "bpmn",
+        "erp",
+        "automation",
+        "scrum",
+        "business process",
+        "stakeholder"
+      ],
+      "cvSkills": [
+        "IT Project Management",
+        "PMO",
+        "Data Management",
+        "Data Infrastructure",
+        "Data Analysis & Reporting",
+        "Business Analysis",
+        "BPMN",
+        "Business Process Analysis",
+        "ERP Implementation",
+        "Automation",
+        "Scrum (PSM I / PSPO I)",
+        "Stakeholder Management",
+        "Budgets & P&L",
+        "Gap Analysis"
+      ],
+      "cvDate": "2024-09-09T15:56:35.000Z"
+    },
+    {
+      "id": "nina-sastre",
+      "name": "Nina Sastre",
+      "role": "Process Improvement & Project Manager",
+      "photo": null,
+      "kw": [
+        "lean",
+        "process improvement",
+        "project manager",
+        "chef de projet",
+        "transformation",
+        "change management",
+        "conduite du changement",
+        "stakeholder",
+        "kpi",
+        "reporting",
+        "agile",
+        "scrum",
+        "formation",
+        "amélioration continue",
+        "performance"
+      ],
+      "cvSkills": [
+        "Lean Process Improvement",
+        "Project Management",
+        "Healthcare Transformation",
+        "Operational Excellence",
+        "Stakeholder Management",
+        "Change Management",
+        "KPI & Performance Monitoring",
+        "Training & Coaching",
+        "Agile (Scrum)",
+        "Data Analysis"
+      ],
+      "cvDate": "2026-03-23T10:19:33.000Z"
+    },
+    {
+      "id": "junior-cantos",
+      "name": "Junior Cantos",
+      "role": "Transformation & Operational Performance",
+      "photo": "https://www.dtsc.be/wp-content/uploads/2026/03/junior-Cantos-photo-2.jpg",
+      "kw": [
+        "prince2",
+        "lean",
+        "six sigma",
+        "chef de projet",
+        "project manager",
+        "transformation",
+        "change management",
+        "conduite du changement",
+        "programme",
+        "erp",
+        "crm",
+        "digitalisation",
+        "amélioration continue",
+        "gestion de projet",
+        "performance opérationnelle",
+        "pmo",
+        "coordination",
+        "accompagnement"
+      ],
+      "cvSkills": [
+        "PRINCE2 Foundation",
+        "Lean Six Sigma Black Belt",
+        "Change Management Foundation V3",
+        "Program Management",
+        "Organizational Transformation",
+        "Process Optimization",
+        "ERP / CRM / TMS Deployment",
+        "People Management",
+        "P&L Management",
+        "AI & Digital Productivity",
+        "Continuous Improvement",
+        "Supply Chain Management",
+        "Go-To-Market Strategy"
+      ],
+      "cvDate": "2026-04-14T17:25:08.000Z"
+    },
+    {
+      "id": "matthieu-roy",
+      "name": "Matthieu Roy",
+      "role": "Digital Solution Manager / Interim CTO",
+      "photo": "https://www.dtsc.be/wp-content/uploads/2026/03/Personal-Matthieu-Roy-09-Corporate-2-1.jpg",
+      "kw": [
+        "digital",
+        "solution manager",
+        "consultant it",
+        "architecture",
+        "api",
+        "intégration",
+        "migration",
+        "cloud",
+        "automatisation",
+        "déploiement",
+        "système d'information",
+        "chef de projet",
+        "scoping",
+        "product",
+        "coordination",
+        "ia",
+        "intelligence artificielle"
+      ],
+      "cvSkills": [
+        "Business-Tech Alignment",
+        "API & System Integrations",
+        "SaaS Platform Management",
+        "Automation & AI",
+        "Technical Scoping & Phasing",
+        "Process & Workflow Structuring",
+        "PHP / Python / SQL / Linux",
+        "Docker / CI/CD / Git",
+        "Cloud & Hosting",
+        "Interim CTO",
+        "Product Management",
+        "Team & Partner Coordination",
+        "PRINCE2 (in progress)"
+      ],
+      "cvDate": "2026-06-02T12:51:29.000Z"
+    },
+    {
+      "id": "maud-boreux",
+      "name": "Maud Boreux",
+      "role": "Cheffe de projet & Lean Manager",
+      "photo": null,
+      "kw": [
+        "pmo",
+        "chef de projet",
+        "project manager",
+        "lean",
+        "green belt",
+        "kaizen",
+        "amélioration continue",
+        "change management",
+        "kpi",
+        "gestion de projet",
+        "coordination",
+        "pilotage",
+        "stakeholder",
+        "programme",
+        "transformation"
+      ],
+      "cvSkills": [
+        "PMO",
+        "Gestion de projets stratégiques",
+        "Lean Management (Green Belt)",
+        "Kaizen / 5S / VSM",
+        "Amélioration continue",
+        "Change Management",
+        "KPI & Pilotage",
+        "Stakeholder Management",
+        "Encadrement d'équipe",
+        "Gestion de programme"
+      ],
+      "cvDate": "2026-01-05T17:16:40.000Z"
+    },
+    {
+      "id": "philomene-scohy",
+      "name": "Philomène Scohy",
+      "role": "Product Owner / Agile Coach",
+      "photo": "https://www.dtsc.be/wp-content/uploads/2024/10/philomene.jpg",
+      "kw": [
+        "product owner",
+        "agile",
+        "scrum",
+        "scrum master",
+        "backlog",
+        "lean",
+        "six sigma",
+        "amélioration continue",
+        "change management",
+        "conduite du changement",
+        "stakeholder",
+        "coordination",
+        "accompagnement",
+        "facilitation",
+        "product management"
+      ],
+      "cvSkills": [
+        "Product Ownership",
+        "Backlog Management",
+        "Roadmap Alignment",
+        "Agile Coaching",
+        "Scrum Master (CSM / PSM I)",
+        "CSPO / ACSPO",
+        "Lean Six Sigma Black Belt",
+        "Stakeholder Alignment",
+        "User Story Mapping",
+        "Continuous Improvement",
+        "Change Management",
+        "Workshop Facilitation"
+      ],
+      "cvDate": "2026-06-02T12:53:12.000Z"
+    },
+    {
+      "id": "samuel-aulotte",
+      "name": "Samuel Aulotte",
+      "role": "System, Network & Security Engineer",
+      "photo": null,
+      "kw": [
+        "microsoft",
+        "azure",
+        "cloud",
+        "sécurité",
+        "cybersécurité",
+        "système d'information",
+        "infrastructure",
+        "réseau",
+        "linux",
+        "automatisation",
+        "déploiement",
+        "microsoft 365",
+        "devops",
+        "support",
+        "administration"
+      ],
+      "cvSkills": [
+        "Microsoft 365 Administration",
+        "Azure (Entra ID, Sentinel, Defender)",
+        "Cybersécurité (Zero Trust, RBAC, MFA)",
+        "Windows Server / Linux Administration",
+        "Virtualisation (VMware, Proxmox)",
+        "Networking & Routing",
+        "DevSecOps / CI-CD (GitHub Actions, Azure DevOps)",
+        "Automation (Ansible, scripts)",
+        "Webmastering & SEO",
+        "GDPR & EU AI Act compliance"
+      ],
+      "cvDate": "2026-05-20T10:32:02.000Z"
+    },
+    {
+      "id": "anumta-shaikh",
+      "name": "Anumta Shaikh",
+      "role": "BI Analyst | Data & Business Intelligence",
+      "photo": null,
+      "kw": [
+        "data",
+        "business intelligence",
+        "power bi",
+        "reporting",
+        "kpi",
+        "sql",
+        "analyse",
+        "data governance",
+        "modélisation",
+        "python",
+        "microsoft",
+        "azure",
+        "consultant it",
+        "analytique"
+      ],
+      "cvSkills": [
+        "Power BI (Advanced DAX)",
+        "Data Modeling (Star Schema)",
+        "SQL (Snowflake, SQL Server)",
+        "Data Governance & Quality",
+        "KPI Definition & Reporting",
+        "Power Query (M)",
+        "Python (Pandas)",
+        "Microsoft Fabric / Azure SQL",
+        "Financial Reporting",
+        "Certification PL-300 (Microsoft)"
+      ],
+      "cvDate": "2026-04-30T14:10:41.000Z"
+    },
+    {
+      "id": "julie-destexhe",
+      "name": "Julie Destexhe",
+      "role": "Project Manager",
+      "photo": null,
+      "kw": [
+        "pmo",
+        "chef de projet",
+        "project manager",
+        "programme",
+        "gestion de projet",
+        "change management",
+        "conduite du changement",
+        "agile",
+        "scrum",
+        "lean",
+        "amélioration continue",
+        "reporting",
+        "power bi",
+        "stakeholder",
+        "coordination",
+        "accompagnement"
+      ],
+      "cvSkills": [
+        "Project Management (PSM-1)",
+        "PMO & Portfolio Management (>100 projets)",
+        "Change Management",
+        "Agile / Scrum / Kanban",
+        "Lean Management",
+        "Power BI & Reporting",
+        "Risk & Budget Management",
+        "Stakeholder Management",
+        "MS Project",
+        "Programme Management (Elia)"
+      ],
+      "cvDate": "2026-06-02T12:51:58.000Z"
+    },
+    {
+      "id": "ludovic-van-laethem",
+      "name": "Ludovic Van Laethem",
+      "role": "(CV non indexé SP)",
+      "photo": null,
+      "kw": [],
+      "cvSkills": [],
+      "cvDate": null
+    }
+  ],
+  "offers": [
+    {
+      "id": "kce",
+      "workspaceId": "25bb26d2-411b-43cc-897f-741688309cf8",
+      "employer": "KCE (Centre fédéral d'expertise des soins de santé)",
+      "reference": "2026-02_PPM Tool_pub01",
+      "sectorLabel": "🏥 Santé / Fédéral",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "budget": "N.D.",
+      "duration": "N.D. (fourniture + maintenance)",
+      "location": "Bruxelles",
+      "title": "Fourniture, mise en oeuvre et maintenance d'un outil PPM (Project & Program management tool)",
+      "description": "Le KCE désire améliorer la gestion de ses projets et de son programme de recherche à l'aide d'un logiciel permettant de : (1) optimiser le programme de recherche (affectation des ressources jours/experts, planning des projets, simulations) ; (2) gérer les projets de manière professionnelle et soutenir les chefs de projet et managers de programme tout au long du cycle de vie (planning, suivi de mise en œuvre, reporting, gestion des risques) ; (3) rapporter au Conseil d'administration des indicateurs sur l'évolution des projets ; (4) encoder les prestations des experts (timesheets) pour analyse, KPI et comptabilité analytique ; (5) échanger des données avec d'autres applications de manière (semi-)automatisée. Migration des données depuis le logiciel actuel à prévoir. ~100 projets/activités, 150 utilisateurs. Procédure concurrentielle avec négociation. CPV : services de programmation et de conseil en logiciels. Questions jusqu'au 22/06/2026.",
+      "tags": [
+        "PPM Tool",
+        "Gestion de programme",
+        "Timesheets",
+        "Migration de données",
+        "Procédure avec négociation"
+      ],
+      "skills": [
+        {
+          "t": "Gestion de programme",
+          "hard": true
+        },
+        {
+          "t": "Migration IT",
+          "hard": true
+        },
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Data & BI",
+          "hard": true
+        },
+        {
+          "t": "Gestion des risques",
+          "hard": true
+        },
+        {
+          "t": "Outils PPM",
+          "hard": true
+        }
+      ],
+      "score": 95,
+      "verdict": "go",
+      "deadline": "2026-07-06",
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "hrrail",
+      "workspaceId": "d1747fae-8c0d-49fc-b6c2-8fb8f9294a2d",
+      "employer": "HR Rail S.A.",
+      "reference": "PPP1J2-297/6050/2026/012/HSME7",
+      "sectorLabel": "🚆 Ferroviaire / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "budget": "Max. 700 000 €",
+      "duration": "27 mois · 5j/sem (oct.2026→déc.2028)",
+      "location": "Bruxelles",
+      "title": "Consultant coordinateur — Migration IT (Soins de santé & assurabilité)",
+      "description": "Coordinateur de projet (sans autorité hiérarchique) pour migration IT de la CSS. Mission : alignement priorités/sponsors, reporting management, conseil risques, coordination inter-équipes, PMO général. Oct. 2026 → déc. 2028 inclus, 5j/semaine. Procédure restreinte + accord-cadre.",
+      "tags": [
+        "PMO",
+        "Migration IT",
+        "Soins de santé",
+        "Procédure restreinte",
+        "Accord-cadre"
+      ],
+      "skills": [
+        {
+          "t": "Coordination projet / PMO senior",
+          "hard": true
+        },
+        {
+          "t": "Reporting & gouvernance IT",
+          "hard": true
+        },
+        {
+          "t": "Stakeholder management",
+          "hard": false
+        },
+        {
+          "t": "Domaine santé / assurabilité",
+          "hard": false
+        },
+        {
+          "t": "Gestion des risques",
+          "hard": true
+        }
+      ],
+      "score": 85,
+      "verdict": "go",
+      "deadline": "2026-07-02",
+      "emailDate": "2026-06-03"
+    },
+    {
+      "id": "forem",
+      "workspaceId": "f9d64849-9070-4489-b0cd-e8efd7edac7f",
+      "employer": "Le Forem (Office Wallon de la Formation)",
+      "reference": "DMP2600251/HTNMMN/CDP",
+      "sectorLabel": "🌿 Région wallonne / Public",
+      "sectorBg": "#D1FAE5",
+      "sectorColor": "#065F46",
+      "budget": "N.D.",
+      "duration": "Accord-cadre multi-annuel",
+      "location": "Wallonie",
+      "title": "Consultance spécialisée — Gestion de projets/programmes IT & Architecture d'entreprise",
+      "description": "Accord-cadre (3 lots) pour consultance en régie : gestion de projets/programmes informatiques et architecture d'entreprise. Mode régie (renforcement équipe IT) ou régie plafonnée (périmètre défini). Procédure ouverte, directive 2014/24/EU.",
+      "tags": [
+        "PM IT",
+        "Architecture entreprise",
+        "Accord-cadre",
+        "3 lots",
+        "Procédure ouverte"
+      ],
+      "skills": [
+        {
+          "t": "Gestion de projets/programmes IT",
+          "hard": true
+        },
+        {
+          "t": "Architecture d'entreprise / TOGAF",
+          "hard": true
+        },
+        {
+          "t": "Consultance en régie",
+          "hard": false
+        },
+        {
+          "t": "Secteur public wallon",
+          "hard": false
+        }
+      ],
+      "score": 78,
+      "verdict": "go",
+      "deadline": "2026-07-16",
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "inami",
+      "workspaceId": "4749f230-4f46-4081-866c-02a8f7a052d4",
+      "employer": "INAMI",
+      "reference": "RIZIV-INAMI-AOD-2025-21-PPM TOOL",
+      "sectorLabel": "🏛️ Sécurité sociale / Fédéral",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Bruxelles",
+      "title": "Outil PPM — INAMI (⚠️ Avis d'attribution)",
+      "description": "⚠️ Marché déjà attribué. Avis d'attribution : fourniture, mise en œuvre et maintenance d'un outil PPM pour l'INAMI. Procédure concurrentielle avec négociation. Publié sur TED. Utilité : veille concurrentielle uniquement.",
+      "tags": [
+        "⚠️ Déjà attribué",
+        "PPM Tool",
+        "Attribution",
+        "Veille concurrentielle"
+      ],
+      "skills": [
+        {
+          "t": "Expertise outils PPM",
+          "hard": true
+        },
+        {
+          "t": "Implémentation logiciel PPM",
+          "hard": true
+        },
+        {
+          "t": "Gestion de portefeuille projets",
+          "hard": false
+        }
+      ],
+      "score": 25,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "skeyes",
+      "workspaceId": "ccb1db70-5f03-435c-a39b-25d2ea5f244e",
+      "employer": "skeyes (navigation aérienne)",
+      "reference": "OA2950",
+      "sectorLabel": "✈️ Aviation / Fédéral",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Steenokkerzeel (BRU)",
+      "title": "Business Analyst — skeyes (⚠️ Avis d'attribution)",
+      "description": "⚠️ Marché déjà attribué. Avis d'attribution : mise à disposition d'un (1) Business Analyst pour skeyes via procédure négociée sans mise en concurrence préalable. Directive 2014/25/EU (secteurs spéciaux). Non publié sur TED.",
+      "tags": [
+        "⚠️ Déjà attribué",
+        "Business Analyst",
+        "Aviation",
+        "Attribution"
+      ],
+      "skills": [
+        {
+          "t": "Business Analysis",
+          "hard": true
+        },
+        {
+          "t": "Secteur aviation / contrôle aérien",
+          "hard": false
+        }
+      ],
+      "score": 28,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "opw",
+      "workspaceId": "1c4b24b2-049c-4c74-ab6f-77234d3626ff",
+      "employer": "Organisme payeur de Wallonie (OPW)",
+      "reference": "A3.00.03.00-26-1109",
+      "sectorLabel": "🌿 OPW / Wallonie",
+      "sectorBg": "#D1FAE5",
+      "sectorColor": "#065F46",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Wallonie",
+      "title": "Mission d'accompagnement — Déploiement Gestionnaire de risques (OPW)",
+      "description": "Accompagnement du gestionnaire de risques à la mise en place opérationnelle et au déploiement du management des risques à l'OPW (organisme payeur wallon FEAGA/FEADER). Procédure ouverte, directive 2014/24/EU, non publié sur TED. Questions : 15/06 → 29/06/2026.",
+      "tags": [
+        "Gestion des risques",
+        "OPW",
+        "FEAGA/FEADER",
+        "Wallonie",
+        "Procédure ouverte"
+      ],
+      "skills": [
+        {
+          "t": "Expertise gestion des risques / risk management",
+          "hard": true
+        },
+        {
+          "t": "Accompagnement conduite du changement",
+          "hard": false
+        },
+        {
+          "t": "Secteur agriculture / fonds européens",
+          "hard": false
+        }
+      ],
+      "score": 38,
+      "verdict": "maybe",
+      "deadline": "2026-07-13",
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "lbsm",
+      "workspaceId": "57f685f4-fa2e-4655-a111-e491993d6c50",
+      "employer": "Ligue Bruxelloise pour la Santé Mentale",
+      "reference": "MUTU/LOGICIEL/2026",
+      "sectorLabel": "🏥 Santé mentale / ASBL",
+      "sectorBg": "#EDE9FE",
+      "sectorColor": "#6D28D9",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Bruxelles",
+      "title": "Fourniture et exploitation d'un ou plusieurs logiciels-métier (santé mentale)",
+      "description": "Marché public (2 lots, Fournitures) : fourniture et exploitation d'un ou plusieurs logiciels-métier pour services pluridisciplinaires médicalisés et/ou non-médicalisés (secteur social-santé). CPV : Logiciels et systèmes d'information. Procédure concurrentielle avec négociation.",
+      "tags": [
+        "Logiciel métier",
+        "Santé mentale",
+        "2 lots",
+        "ASBL",
+        "Fournitures"
+      ],
+      "skills": [
+        {
+          "t": "Fourniture logiciel métier / SaaS santé",
+          "hard": true
+        },
+        {
+          "t": "Implémentation et exploitation logiciel",
+          "hard": false
+        }
+      ],
+      "score": 22,
+      "verdict": "maybe",
+      "deadline": "2026-07-07",
+      "emailDate": "2026-06-04"
+    }
+  ]
+}
