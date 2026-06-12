@@ -2,9 +2,9 @@
   "meta": {
     "siteVersion": "1.0.0",
     "artifactVersion": "0.5.9",
-    "lastSync": "2026-06-12T12:32:42.000Z",
-    "generatedAt": "2026-06-12T12:32:42.000Z",
-    "source": "Sync Cowork — emails ePROC (noreply@publicprocurement.be) + pages publicprocurement.be + CVs SharePoint"
+    "lastSync": "2026-06-12T12:49:12.431Z",
+    "generatedAt": "2026-06-12T12:49:12.432Z",
+    "source": "Sync Cowork 12/06/2026 — 9 emails ePROC (03/06→10/06) + pages publicprocurement.be (Chrome) + CVs SharePoint (aucun delta)"
   },
   "matrice": {
     "poles": [
@@ -591,6 +591,1836 @@
     }
   ],
   "offers": [
+    {
+      "id": "68ba25c6-604d-4dd9-833b-c05842fef206",
+      "workspaceId": "68ba25c6-604d-4dd9-833b-c05842fef206",
+      "employer": "BOSA — DG Simplification & Digitalisation",
+      "reference": "BOSA 0044",
+      "title": "Services de développement de projets et de logiciels — API, SOA et UX/UI, chatbot et IA",
+      "description": "Accord-cadre (4 lots, procédure ouverte) : services de développement de projets et de logiciels — API, SOA, UX/UI, chatbot et IA. CPV : services IT, conseil, développement de logiciels. Publié sur TED. Questions : 09/06 → 14/08/2026. Deadline 16/09/2026 11:00.",
+      "budget": "N.D.",
+      "duration": "Accord-cadre multi-annuel",
+      "location": "Bruxelles",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Développement",
+        "API / SOA",
+        "UX/UI",
+        "Chatbot & IA",
+        "4 lots",
+        "Accord-cadre",
+        "Procédure ouverte"
+      ],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Conduite du changement",
+          "hard": true
+        },
+        {
+          "t": "Formation",
+          "hard": false
+        }
+      ],
+      "score": 71,
+      "verdict": "go",
+      "deadline": "2026-09-16",
+      "emailDate": "2026-06-10"
+    },
+    {
+      "id": "404ec7ab-ab21-43ef-a231-31d1cd692f0a",
+      "workspaceId": "404ec7ab-ab21-43ef-a231-31d1cd692f0a",
+      "employer": "Bruxelles Formation",
+      "reference": "BF-MA-26-001",
+      "title": "Marché public de services de formation « Gestion de projet en environnement »",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏙️ Bruxelles / Public",
+      "sectorBg": "#EDE9FE",
+      "sectorColor": "#6D28D9",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Gestion de projet / PMO",
+          "hard": true
+        },
+        {
+          "t": "Formation",
+          "hard": false
+        },
+        {
+          "t": "Marchés publics",
+          "hard": false
+        }
+      ],
+      "score": 59,
+      "verdict": "maybe",
+      "deadline": "2026-08-25",
+      "emailDate": "2026-06-09"
+    },
+    {
+      "id": "8a642683-e399-4b25-9b9c-7d41ac46bc1a",
+      "workspaceId": "8a642683-e399-4b25-9b9c-7d41ac46bc1a",
+      "employer": "Center for Cybersecurity Belgium",
+      "reference": "CCB/PPM2026-003",
+      "title": "\"Safe on web\" awareness campaigns",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏢 Secteur public",
+      "sectorBg": "#F1F5F9",
+      "sectorColor": "#64748B",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Agile / Scrum",
+          "hard": true
+        },
+        {
+          "t": "Sécurité IT",
+          "hard": true
+        }
+      ],
+      "score": 59,
+      "verdict": "maybe",
+      "deadline": "2026-06-29",
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "8d2b9ee5-be11-48d5-85b7-f7fe6d0e603d",
+      "workspaceId": "8d2b9ee5-be11-48d5-85b7-f7fe6d0e603d",
+      "employer": "HR Rail S.A.",
+      "reference": "PPP1J2-262/5067/2025/012/CSS-KGV",
+      "title": "Implémentation et mise à disposition d'une application de gestion des communications entrantes via mail, téléphone et une plateforme de gestion à développer (Ticketing tool)",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Déploiement / implémentation",
+          "hard": false
+        }
+      ],
+      "score": 57,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-03"
+    },
+    {
+      "id": "929f7283-a7f1-4e3d-b143-8313bd72b695",
+      "workspaceId": "929f7283-a7f1-4e3d-b143-8313bd72b695",
+      "employer": "SNCB-Procurement",
+      "reference": "WS3014005680",
+      "title": "Support technique pour développement système gestion de sécurité",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Sécurité IT",
+          "hard": true
+        },
+        {
+          "t": "Maintenance / Support",
+          "hard": false
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 55,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "3a4b4da0-e823-40d8-b469-75ff5e8d1303",
+      "workspaceId": "3a4b4da0-e823-40d8-b469-75ff5e8d1303",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000794320 - ELE_Q_STOP",
+      "title": "e-Market 829 - S/4 EWM Embedded consultant - Project DC Ronet",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Consultance / accompagnement",
+          "hard": false
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 55,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "b273b041-b029-45f5-bbd9-9cfa2332f46e",
+      "workspaceId": "b273b041-b029-45f5-bbd9-9cfa2332f46e",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000818558_SFA",
+      "title": "Consultant Buyer",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Consultance / accompagnement",
+          "hard": false
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 55,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "4ca49ad8-b0c1-4858-8b0f-d0c41afbacee",
+      "workspaceId": "4ca49ad8-b0c1-4858-8b0f-d0c41afbacee",
+      "employer": "DGEM (SPF Santé publique)",
+      "reference": "DGEM/DPPC/AC/26012",
+      "title": "Mise en oeuvre d'une campagne de sensibilisation sur la fast fashion",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Déploiement / implémentation",
+          "hard": false
+        }
+      ],
+      "score": 49,
+      "verdict": "maybe",
+      "deadline": "2026-07-22",
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "09b556f2-bfa6-46bf-888e-7ab9ccb67ec4",
+      "workspaceId": "09b556f2-bfa6-46bf-888e-7ab9ccb67ec4",
+      "employer": "Police Fédérale",
+      "reference": "2025R3127",
+      "title": "Accord-cadre : souscription, maintenance et mise à jour de solution pour la collecte, détection et analyse des transactions en monnaies virtuelles",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Maintenance / Support",
+          "hard": false
+        }
+      ],
+      "score": 47,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-09"
+    },
+    {
+      "id": "e3d7abc6-860f-405f-8a35-3cbc08b80142",
+      "workspaceId": "e3d7abc6-860f-405f-8a35-3cbc08b80142",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000789753 - ELE _ Q_STOP",
+      "title": "e-Market 804 - Experienced Software DevOps Engineer",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Infrastructure / Cloud",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 47,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "21dbf6f4-bf6e-4e9c-877c-61c6978a9638",
+      "workspaceId": "21dbf6f4-bf6e-4e9c-877c-61c6978a9638",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000789013 - ELE _ Q",
+      "title": "e-Market 800 - Expert Java Devops Engineer OpenShift",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Infrastructure / Cloud",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 47,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "e127fb9e-9a72-473a-9192-1bbdfe4b490a",
+      "workspaceId": "e127fb9e-9a72-473a-9192-1bbdfe4b490a",
+      "employer": "Enabel",
+      "reference": "BXL-15788",
+      "title": "Acquisition of licences for the use of software for the efficient management of multilingual document templates",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-10"
+    },
+    {
+      "id": "ff23a914-8fd0-47fa-8d13-2e8b2a40b343",
+      "workspaceId": "ff23a914-8fd0-47fa-8d13-2e8b2a40b343",
+      "employer": "Théâtre Royal de la Monnaie",
+      "reference": "ARCH2602",
+      "title": "Développement d'un système de gestion de la description des productions, des collections et d'archives",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏙️ Bruxelles / Public",
+      "sectorBg": "#EDE9FE",
+      "sectorColor": "#6D28D9",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": "2026-07-10",
+      "emailDate": "2026-06-10"
+    },
+    {
+      "id": "56e2fa67-42b1-414a-bfca-377b04fccfa8",
+      "workspaceId": "56e2fa67-42b1-414a-bfca-377b04fccfa8",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000804898 - e-market",
+      "title": "Bundle 003 de profils ICT JAVA",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-09"
+    },
+    {
+      "id": "57f5a836-ab9c-4758-b25c-8c8a7c03ffb6",
+      "workspaceId": "57f5a836-ab9c-4758-b25c-8c8a7c03ffb6",
+      "employer": "SNCB-Procurement",
+      "reference": "WS1918743375",
+      "title": "Achat de licences Viriato avec maintenance",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Maintenance / Support",
+          "hard": false
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "304e689e-f9f3-45c4-b9b6-91a2b778b3ec",
+      "workspaceId": "304e689e-f9f3-45c4-b9b6-91a2b778b3ec",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000794115 - ELE _ Q",
+      "title": "e-Market 827 - SAP HR Software Engineer (OM/PA/TIME)",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "214797b4-381a-4b6b-a2e3-8f3721834e78",
+      "workspaceId": "214797b4-381a-4b6b-a2e3-8f3721834e78",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000794031 - ELE _ Q",
+      "title": "e-Market 823 - Medior Oracle APEX Developer",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "10dcdcd3-33aa-4570-ae32-1533328aec78",
+      "workspaceId": "10dcdcd3-33aa-4570-ae32-1533328aec78",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000794384 - ELE _ Q",
+      "title": "e-Market 830 - Senior Angular-Java full stack developer",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "b2cbdd15-ad3c-47d8-a5a3-be03d6ac5cd5",
+      "workspaceId": "b2cbdd15-ad3c-47d8-a5a3-be03d6ac5cd5",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000791567 - ELE_Q_STOP",
+      "title": "e-Market 815 - Senior Office 365 Analyst and Developer",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "8207a8ff-3fef-46dc-bd9b-33f68293ede7",
+      "workspaceId": "8207a8ff-3fef-46dc-bd9b-33f68293ede7",
+      "employer": "VisitFlanders",
+      "reference": "TVL/2025/1885/OZB/MAR",
+      "title": "ICT onderhoud en support van AI-gepersonaliseerde reisgids VisitFlanders",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Maintenance / Support",
+          "hard": false
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "197e669d-7d89-4bc7-bfb0-a3df702383d9",
+      "workspaceId": "197e669d-7d89-4bc7-bfb0-a3df702383d9",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000790299 - ELE _ Q",
+      "title": "e-Market 810 - Senior C++ Developer",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "f2a2c83a-f690-4009-adad-227de51a60f5",
+      "workspaceId": "f2a2c83a-f690-4009-adad-227de51a60f5",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000790301 - ELE _ Q",
+      "title": "e-Market 811 - Senior Java & Angular Developer",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "7e63d2fe-a507-41a9-a61e-d16f555737e5",
+      "workspaceId": "7e63d2fe-a507-41a9-a61e-d16f555737e5",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000799703_DMU_Q",
+      "title": "e-Market 839 - Senior Java & Angular Developer",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 43,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-03"
+    },
+    {
+      "id": "8c44eb7d-a5eb-4aad-8c16-f9a25d2e0975",
+      "workspaceId": "8c44eb7d-a5eb-4aad-8c16-f9a25d2e0975",
+      "employer": "Institut Bruxellois pour la Gestion de l'Environnement",
+      "reference": "PPP0UM-19844/6178/2026F0038",
+      "title": "Analyse d'impact budgétaire et socio-économique du Plan Air Climat Energie",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏙️ Bruxelles / Public",
+      "sectorBg": "#EDE9FE",
+      "sectorColor": "#6D28D9",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Analyse d'impact budgétaire et socio",
+          "hard": false
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-10"
+    },
+    {
+      "id": "a5aa26a2-011a-46b5-818a-929dafbc5e93",
+      "workspaceId": "a5aa26a2-011a-46b5-818a-929dafbc5e93",
+      "employer": "Departement Onderwijs en Vorming",
+      "reference": "KCD/2026/cybersecurity",
+      "title": "Professionaliseringstraject 'Aan de slag met cybersecurity'",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Sécurité IT",
+          "hard": true
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": "2026-06-19",
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "9ae9d8c7-690a-4b56-b851-3b824637abc1",
+      "workspaceId": "9ae9d8c7-690a-4b56-b851-3b824637abc1",
+      "employer": "INASTI (Institut national d'assurances sociales pour travailleurs indépendants)",
+      "reference": "2026/305/CCH/SD/A",
+      "title": "Cloud FinOps as a Service",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Infrastructure / Cloud",
+          "hard": true
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-09"
+    },
+    {
+      "id": "2a0d3f53-9e7b-4f19-8404-487d4d10cc3e",
+      "workspaceId": "2a0d3f53-9e7b-4f19-8404-487d4d10cc3e",
+      "employer": "Bruxelles-Propreté",
+      "reference": "25/2728",
+      "title": "Formation au permis C et CAP et renouvellement du CAP",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏙️ Bruxelles / Public",
+      "sectorBg": "#EDE9FE",
+      "sectorColor": "#6D28D9",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Formation",
+          "hard": false
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": "2026-06-26",
+      "emailDate": "2026-06-09"
+    },
+    {
+      "id": "22d73fad-1a19-460c-9fc4-20e1dfb52175",
+      "workspaceId": "22d73fad-1a19-460c-9fc4-20e1dfb52175",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000786682 - ELE _ Q_STOP",
+      "title": "eMarketplace 794 - Senior Data analyst",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Data & BI",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "c644828d-6cb8-4920-9e0c-6f170107ca07",
+      "workspaceId": "c644828d-6cb8-4920-9e0c-6f170107ca07",
+      "employer": "Afdeling Kust",
+      "reference": "AFD KUST-226.020",
+      "title": "Datacontrole van het Meetnet Vlaamse Banken",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Datacontrole van het Meetnet Vlaamse Ban",
+          "hard": false
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": "2026-07-14",
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "76ecb94a-3403-497b-bc1f-c3cbc6d5490c",
+      "workspaceId": "76ecb94a-3403-497b-bc1f-c3cbc6d5490c",
+      "employer": "Departement Onderwijs en Vorming",
+      "reference": "OND/KCDigisprong/2026/digitaledidactiek",
+      "title": "Professionaliseringstraject 'Stap voor stap in 3 maanden naar krachtige digitale didactiek'",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Professionaliseringstraject 'Stap voor s",
+          "hard": false
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": "2026-06-15",
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "ac8cdaaf-56a4-42a9-9c4c-a42eb9c0de08",
+      "workspaceId": "ac8cdaaf-56a4-42a9-9c4c-a42eb9c0de08",
+      "employer": "VDAB",
+      "reference": "2026/1000/INK/GEN/BP",
+      "title": "Aanstelling bedrijfsrevisor voor de controle en certificering van de jaarrekening",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Révision / Audit financier",
+          "hard": true
+        },
+        {
+          "t": "Normes ISO / Certification",
+          "hard": true
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-03"
+    },
+    {
+      "id": "df6b7274-56f8-46ce-842d-d58b2eb1fda0",
+      "workspaceId": "df6b7274-56f8-46ce-842d-d58b2eb1fda0",
+      "employer": "SPF Economie, PME, Classes moyennes et Energie",
+      "reference": "2026/96620/E6/Interne audit ISO9001+17025",
+      "title": "Audit interne pour les normes ISO 9001 et ISO/IEC 17025",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Normes ISO / Certification",
+          "hard": true
+        },
+        {
+          "t": "Audit",
+          "hard": true
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-03"
+    },
+    {
+      "id": "e50bb4d4-639d-4caf-96a6-64c9b37ea563",
+      "workspaceId": "e50bb4d4-639d-4caf-96a6-64c9b37ea563",
+      "employer": "Office de la Naissance et de l'Enfance",
+      "reference": "O-26033-ACH-LG-ImprimésCarnets2027",
+      "title": "Impression de documents : Carnet « Démarches administratives liées à la parentalité » + Carnet « Devenir et être parent, toute une aventure ! »",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏙️ Bruxelles / Public",
+      "sectorBg": "#EDE9FE",
+      "sectorColor": "#6D28D9",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Impression de documents",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-03",
+      "emailDate": "2026-06-10"
+    },
+    {
+      "id": "de423cd5-82b8-4272-ba2e-3878578cfc6d",
+      "workspaceId": "de423cd5-82b8-4272-ba2e-3878578cfc6d",
+      "employer": "Institut royal des Sciences naturelles de Belgique",
+      "reference": "Topflags/RBINS/2026",
+      "title": "Services de campagnes d'affichage publicitaire en format Topflags 1m x 3m en région bruxelloise",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏙️ Bruxelles / Public",
+      "sectorBg": "#EDE9FE",
+      "sectorColor": "#6D28D9",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Services de campagnes d'affichage public",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-03",
+      "emailDate": "2026-06-10"
+    },
+    {
+      "id": "f0f078dc-9d57-44b8-b560-63620a745ae4",
+      "workspaceId": "f0f078dc-9d57-44b8-b560-63620a745ae4",
+      "employer": "Vlaamse Gemeenschapscommissie",
+      "reference": "VGC2026/DFBA/Aankoop/MDC/16",
+      "title": "Raamovereenkomst voor ICT-ondersteuning in de onderwijsinstellingen van de Vlaamse Gemeenschapscommissie",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Raamovereenkomst voor ICT",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-14",
+      "emailDate": "2026-06-10"
+    },
+    {
+      "id": "c9d88fea-4c7f-46db-a000-af7acacc2de8",
+      "workspaceId": "c9d88fea-4c7f-46db-a000-af7acacc2de8",
+      "employer": "VDAB",
+      "reference": "2025_50251_SG-S_Taalcoaching Flankerend",
+      "title": "Toetredingskader Taalcoaching Flankerend",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Toetredingskader Taalcoaching Flankerend",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-10"
+    },
+    {
+      "id": "b69e993e-b642-467c-aade-7b3bb6de5ff3",
+      "workspaceId": "b69e993e-b642-467c-aade-7b3bb6de5ff3",
+      "employer": "Agentschap voor Natuur en Bos",
+      "reference": "PPP0XC-2092/6005/ANB-NISIP-SP-2026-011",
+      "title": "Raamovereenkomst LSO: communicatieve en organisatorische projectondersteuning",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Raamovereenkomst LSO",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-10"
+    },
+    {
+      "id": "1e2a962a-2157-4a79-8b58-051e9102b88f",
+      "workspaceId": "1e2a962a-2157-4a79-8b58-051e9102b88f",
+      "employer": "AHOVOKS",
+      "reference": "2026/TEX/Drukwerk",
+      "title": "(Re)productie van de vragenbundels inclusief verzamel- en bewaaropdracht voor de toelatingsexamens",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — (Re)productie van de vragenbundels inclu",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-09"
+    },
+    {
+      "id": "e5fe2981-9b59-4979-a2d5-3d7d32acb8bd",
+      "workspaceId": "e5fe2981-9b59-4979-a2d5-3d7d32acb8bd",
+      "employer": "VRT",
+      "reference": "2025/OO/838",
+      "title": "Moderatie onlineplatformen",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Moderatie onlineplatformen",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-09"
+    },
+    {
+      "id": "d8813cbb-1aba-4db8-978b-bc1529531d2c",
+      "workspaceId": "d8813cbb-1aba-4db8-978b-bc1529531d2c",
+      "employer": "Agentschap Facilitair Bedrijf",
+      "reference": "2026/HFB/MPMO/154310_S",
+      "title": "Raamovereenkomst voor een Managed Service Provider (MSP) voor ondersteuning bij diverse opdrachten door diverse profielen",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Raamovereenkomst voor een Managed Servic",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-06-19",
+      "emailDate": "2026-06-09"
+    },
+    {
+      "id": "1093ab70-3c2e-4a97-a5b9-04c41615d3b0",
+      "workspaceId": "1093ab70-3c2e-4a97-a5b9-04c41615d3b0",
+      "employer": "Departement Mobiliteit en Openbare Werken",
+      "reference": "WL-WL_2023_07-F02__2",
+      "title": "Ter beschikking stellen van technisch personeel: arbeiders, technicus en tekenaar",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Ter beschikking stellen van technisch pe",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-09"
+    },
+    {
+      "id": "16a99298-23c1-46e0-9b10-8f346a332ce7",
+      "workspaceId": "16a99298-23c1-46e0-9b10-8f346a332ce7",
+      "employer": "VITO",
+      "reference": "PPP04G-1315/6173/RO-NAVIGATOR-1315",
+      "title": "Onderhoud van backend navigator.emis.vito.be",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Onderhoud van backend navigator.emis.vit",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "8e7711bd-4895-4384-85e0-87a2ff84deba",
+      "workspaceId": "8e7711bd-4895-4384-85e0-87a2ff84deba",
+      "employer": "Service Fédéral des Pensions",
+      "reference": "SFPD/S2000/2026/16",
+      "title": "Salle avec restauration pour l'organisation d'une fête du personnel à Bruxelles",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Salle avec restauration pour l'organisat",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "508eed2e-8a71-4c9d-82fc-a603c53f5581",
+      "workspaceId": "508eed2e-8a71-4c9d-82fc-a603c53f5581",
+      "employer": "bpost",
+      "reference": "2026-103-RFI",
+      "title": "Modernize Sortplan Management System to Dynamic Sorting Decision Solution (RFI)",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Modernize Sortplan Management System to ",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-06-08",
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "f9832565-29cb-4356-b62c-e678e08dc21e",
+      "workspaceId": "f9832565-29cb-4356-b62c-e678e08dc21e",
+      "employer": "Vlaamse Maatschappij voor Sociaal Wonen",
+      "reference": "WI 30EDF048",
+      "title": "Aanleg publieke ruimte voor het project 'Em. Vanderveldstraat' te Menen",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Aanleg publieke ruimte voor het project ",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "3ea2916c-81fa-4abb-a84b-49b95f65d4de",
+      "workspaceId": "3ea2916c-81fa-4abb-a84b-49b95f65d4de",
+      "employer": "Service Fédéral des Pensions",
+      "reference": "SFPD/S2000/2026/27",
+      "title": "Salle avec restauration pour l'organisation d'une fête du personnel à Bruxelles",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Salle avec restauration pour l'organisat",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-02",
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "75fd4119-11e7-4f17-b410-9d6c8063f06b",
+      "workspaceId": "75fd4119-11e7-4f17-b410-9d6c8063f06b",
+      "employer": "Vlaamse Maatschappij voor Sociaal Wonen",
+      "reference": "WI 9A9540F8",
+      "title": "Aanleg publieke ruimte voor het project 'Frankrijkstraat' te Menen",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Aanleg publieke ruimte voor het project ",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "0233a80a-3a99-41f2-88d5-0763bcd67cac",
+      "workspaceId": "0233a80a-3a99-41f2-88d5-0763bcd67cac",
+      "employer": "SPF Economie, PME, Classes moyennes et Energie",
+      "reference": "2026/96601/S4/RO Fotografie",
+      "title": "Contrat-cadre pour des services de photographie sur demande",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Contrat",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-06-29",
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "e9e866c9-b28f-4f9b-8622-89f2ab643ef2",
+      "workspaceId": "e9e866c9-b28f-4f9b-8622-89f2ab643ef2",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000794030 - ELE _ Q",
+      "title": "e-Market 822 - Senior Functional Analyst SAP PM",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "a9666c80-3745-4b7e-8dfa-eaee56d6ee30",
+      "workspaceId": "a9666c80-3745-4b7e-8dfa-eaee56d6ee30",
+      "employer": "Fund for Innovation & Entrepreneurship (VLAIO)",
+      "reference": "VLAIO-2026-01",
+      "title": "Raamcontract Ruimtelijke Economie voor 5 expertises",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Raamcontract Ruimtelijke Economie voor 5",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-08",
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "826f9d8b-47d8-4537-8b21-a6b4dadb281c",
+      "workspaceId": "826f9d8b-47d8-4537-8b21-a6b4dadb281c",
+      "employer": "Direction des Achats et de la Logistique",
+      "reference": "MI-O8.13.04-26-356",
+      "title": "Accord-cadre mono-adjudicataire de services de Contrôles légaux périodiques",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏢 Secteur public",
+      "sectorBg": "#F1F5F9",
+      "sectorColor": "#64748B",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Accord",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-13",
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "9b79a16c-945c-4d2d-a30a-c814fdc9eaa5",
+      "workspaceId": "9b79a16c-945c-4d2d-a30a-c814fdc9eaa5",
+      "employer": "VVM De Lijn - Techniek",
+      "reference": "202600546",
+      "title": "Ter beschikking stellen van uitzendkracht",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Ter beschikking stellen van uitzendkrach",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-07",
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "34a1e71f-82f1-4b12-9096-80f24b38493a",
+      "workspaceId": "34a1e71f-82f1-4b12-9096-80f24b38493a",
+      "employer": "SCK•CEN",
+      "reference": "PPP0QA-2192/6236/2026-070-CW",
+      "title": "Methodological development and execution of an SSHAC (Level 1) aligned seismic hazard analysis by GEM - LEANDREA Project",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Methodological development and execution",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "c4f1804d-10b0-4ac6-bda2-ee6018ef46c3",
+      "workspaceId": "c4f1804d-10b0-4ac6-bda2-ee6018ef46c3",
+      "employer": "Loterie Nationale",
+      "reference": "FIN/PRO/2026.12",
+      "title": "Terminaux et Connectivité",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Terminaux et Connectivité",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-06-15",
+      "emailDate": "2026-06-08"
+    },
+    {
+      "id": "18a751c2-a325-4c4f-86d4-42c7a8f24644",
+      "workspaceId": "18a751c2-a325-4c4f-86d4-42c7a8f24644",
+      "employer": "Farys",
+      "reference": "I-25-014",
+      "title": "Raamovereenkomst aanstellen van een meldkamer met monitoring en interventie na alarm",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Raamovereenkomst aanstellen van een meld",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-05",
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "2da2ed4d-bca2-41ac-925b-f3e7a3cf5bdf",
+      "workspaceId": "2da2ed4d-bca2-41ac-925b-f3e7a3cf5bdf",
+      "employer": "Agentschap voor Natuur en Bos",
+      "reference": "2026 03",
+      "title": "Opdracht voor de herbouw van een bestaande examineringapplicatie",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Opdracht voor de herbouw van een bestaan",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-06-23",
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "25a9af33-9a64-48bc-b57c-51c0e4ab7b61",
+      "workspaceId": "25a9af33-9a64-48bc-b57c-51c0e4ab7b61",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000792575 - ELE _ Q",
+      "title": "e-Market 818 - SAP BC technical expert",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "2ef1b874-8934-493b-94a1-c9cb36e8c2b0",
+      "workspaceId": "2ef1b874-8934-493b-94a1-c9cb36e8c2b0",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000793181 - ELE _ Q",
+      "title": "e-Market 819 - F5 ASM en APM technical specialist",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "6d3d8878-a875-4576-beb5-8a0e97dce3ae",
+      "workspaceId": "6d3d8878-a875-4576-beb5-8a0e97dce3ae",
+      "employer": "Afdeling Kust",
+      "reference": "AFD KUST-226.010",
+      "title": "Onderhoud en acquisitie meetpalen op zee van het Meetnet Vlaamse Banken",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Onderhoud en acquisitie meetpalen op zee",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-14",
+      "emailDate": "2026-06-05"
+    },
+    {
+      "id": "c380a46f-7fc3-4c5a-a403-d8b9fe864995",
+      "workspaceId": "c380a46f-7fc3-4c5a-a403-d8b9fe864995",
+      "employer": "SCK•CEN",
+      "reference": "PPP0QA-2191/6239/2026-068-CW",
+      "title": "Seismische risicobeoordelingsstudie door KSB - LEANDREA Project",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Seismische risicobeoordelingsstudie door",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "fcf4c789-dead-496d-bb02-0bb8c3cc6289",
+      "workspaceId": "fcf4c789-dead-496d-bb02-0bb8c3cc6289",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000789575 - ELE _ Q",
+      "title": "e-Market 801 - Scheduling & Orchestration Specialist",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "71c944a3-6e38-4d86-8fc7-0fedebad91dd",
+      "workspaceId": "71c944a3-6e38-4d86-8fc7-0fedebad91dd",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000790777 - ELE _ Q",
+      "title": "e-Market 813 - SAP HR Analyst",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "de924f82-e1e0-4dfe-90c8-a4ad3cadb049",
+      "workspaceId": "de924f82-e1e0-4dfe-90c8-a4ad3cadb049",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "Emarket 869",
+      "title": "e-Market 869 - Senior Functional Analist SAP PM",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "aaf3e782-022f-4162-9710-f989b3d32fed",
+      "workspaceId": "aaf3e782-022f-4162-9710-f989b3d32fed",
+      "employer": "Beheersmaatschappij Antwerpen Mobiel",
+      "reference": "PPP1HI-382/5200/BAM 2025-382",
+      "title": "Mobiscan & mobiliteitsbegeleiding",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Mobiscan & mobiliteitsbegeleiding",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "a1aea61e-727d-4089-9c48-00beb8f010e3",
+      "workspaceId": "a1aea61e-727d-4089-9c48-00beb8f010e3",
+      "employer": "Beheersmaatschappij Antwerpen Mobiel",
+      "reference": "PPP1HI-418/5256/BAM 2025-418",
+      "title": "Druk en verzending bewonerscommunicatie",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Druk en verzending bewonerscommunicatie",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-04"
+    },
+    {
+      "id": "efe95289-c742-4ec8-95b6-ae3ef7ab2349",
+      "workspaceId": "efe95289-c742-4ec8-95b6-ae3ef7ab2349",
+      "employer": "SPF Economie, PME, Classes moyennes et Energie",
+      "reference": "2026/93776 bis/E2/Aankoop gegevens monitoring",
+      "title": "Achat de données dans le cadre de la surveillance du marché du gaz et du marché du GNL",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Achat de données dans le cadre de la sur",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-03"
+    },
+    {
+      "id": "0dea171d-8c8e-4156-a3a8-fd2caa43c504",
+      "workspaceId": "0dea171d-8c8e-4156-a3a8-fd2caa43c504",
+      "employer": "Aankopen en overheidsopdrachten (Vlaanderen)",
+      "reference": "2026/TS/DPROC/081",
+      "title": "Services pour la plateforme des amendes",
+      "description": "",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [],
+      "skills": [
+        {
+          "t": "Expertise — Services pour la plateforme des amendes",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-13",
+      "emailDate": "2026-06-03"
+    },
+    {
+      "id": "4da19fad-5ddd-4188-ad25-d20a970e0818",
+      "workspaceId": "4da19fad-5ddd-4188-ad25-d20a970e0818",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000794420 - ELE_Q_STOP",
+      "title": "e-Market 831 - Scrum Master & Expert Java",
+      "description": "⚠️ Marché déjà attribué. Avis d'attribution (publié TED, 04/06/2026) : Scrum Master & Expert Java via le système de qualification Y15Bis I-46 d'Infrabel, procédure négociée avec mise en concurrence préalable, directive 2014/25/EU (secteurs spéciaux). Veille concurrentielle uniquement.",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Bruxelles",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "⚠️ Déjà attribué",
+        "Scrum Master",
+        "Java",
+        "e-Market",
+        "Attribution"
+      ],
+      "skills": [
+        {
+          "t": "Agile / Scrum",
+          "hard": true
+        },
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 30,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-05"
+    },
     {
       "id": "kce",
       "workspaceId": "25bb26d2-411b-43cc-897f-741688309cf8",
