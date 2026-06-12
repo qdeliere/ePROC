@@ -157,4 +157,9 @@ assert('XSS: <img onerror> échappé', !evilHtml.includes('<img onerror'));
 console.log('\n════════════════════════════');
 console.log('📊 ' + passed + '/' + (passed + failed) + ' tests passés');
 if (failed > 0) {
-  console.error('❌ Échecs :
+  console.error('❌ Échecs :');
+  fails.forEach(f => console.error('   - ' + f));
+  process.exit(1);
+} else {
+  console.log('✅ Suite verte');
+}
