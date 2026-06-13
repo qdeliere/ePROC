@@ -94,9 +94,33 @@
   // ── Matching membres ──
   function matchMembersToOffer(offer, members) {
     const text = offerText(offer);
+    const senReq = offer.seniorityRequired; // { years: N, label: '...' } or undefined
     return (members || [])
-      .map(m => { const matched = (m.kw || []).filter(kw => text.includes(normStr(kw))); return { member: m, matched, score: Math.min(98, matched.length * 15 + 38) }; })
-      .filter(x => x.matched.length > 0).sort((a, b) => b.score - a.score).slice(0, 4);
+      .map(m => {
+        const matched = (m.kw || []).filter(kw => text.includes(normStr(kw)));
+        if (!matched.length) return null;
+        const kwScore = Math.min(98, matched.length * 15 + 38);
+        let score = kwScore;
+        let seniorityOk = null; // null = no requirement or unknown XP
+        if (senReq && senReq.years) {
+          if (m.xpYears != null) {
+            if (m.xpYears >= senReq.years) {
+              seniorityOk = true;
+            } else {
+              // Proportional penalty: factor = xpYears/required, floor at 0.50
+              const factor = Math.max(0.50, m.xpYears / senReq.years);
+              score = Math.round(kwScore * factor);
+              seniorityOk = false;
+            }
+          } else {
+            seniorityOk = null; // XP unknown — no penalty, but flag shown
+          }
+        }
+        return { member: m, matched, score, kwScore, seniorityOk };
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 4);
   }
 
   // ── Matrice : thèmes par offre ──
@@ -195,17 +219,32 @@
     const cvDateHtml = m.cvDate
       ? '<div class="cv-date-line"><span>📄</span><span>CV · ' + esc(fmtDate(m.cvDate.slice(0, 10))) + '</span></div>'
       : '';
-    return '<div class="member-card">'
+    // Seniority badge
+    const xpHtml = m.xpYears != null
+      ? '<div class="xp-years">' + esc(String(m.xpYears)) + ' ans XP</div>'
+      : '';
+    let senBadge = '';
+    if (item.seniorityOk === false) {
+      senBadge = '<div class="seniority-badge warn">⚠️ ' + esc(m.xpYears + ' ans / ' + item.member.xpYears + ' requis') + '</div>';
+      // Simpler: show actual vs required
+      const req = item.kwScore ? Math.round(item.kwScore * 1) : '?'; // suppress unused var lint
+      senBadge = '<div class="seniority-badge warn">⚠️ ' + esc(String(m.xpYears)) + ' ans XP — séniorité insuffisante</div>';
+    }
+    const barColor = item.score >= 70 ? '#16a34a' : item.score >= 50 ? '#d97706' : '#dc2626';
+    return '<div class="member-card' + (item.seniorityOk === false ? ' seniority-warn' : '') + '">'
       + '<div class="member-photo-wrap">' + photoHtml + '<div class="member-initial" style="' + initStyle + '">' + esc(initial) + '</div></div>'
       + '<div class="member-info">'
       + '<div class="member-name">' + esc(m.name) + '</div>'
       + '<div class="member-role">' + esc(m.role) + '</div>'
+      + xpHtml
       + '<div class="member-skills-mini">' + skillsHtml + '</div>'
       + cvDateHtml
+      + senBadge
       + '</div>'
       + '<div class="member-score-col">'
-      + '<div class="member-score-pct">' + item.score + '%</div>'
-      + '<div class="member-bar"><div class="member-bar-fill" style="width:' + item.score + '%"></div></div>'
+      + '<div class="member-score-pct" style="color:' + barColor + '">' + item.score + '%</div>'
+      + (item.kwScore && item.kwScore !== item.score ? '<div class="kw-score-orig">KW: ' + item.kwScore + '%</div>' : '')
+      + '<div class="member-bar"><div class="member-bar-fill" style="width:' + item.score + '%;background:' + barColor + '"></div></div>'
       + '</div></div>';
   }
 
@@ -230,7 +269,7 @@
       + (offer.budget && offer.budget !== 'N.D.' ? '<span>💶 ' + esc(offer.budget) + '</span>' : '')
       + (offer.duration && offer.duration !== 'N.D.' ? '<span>⏱️ ' + esc(offer.duration) + '</span>' : '')
       + (offer.location && offer.location !== 'N.D.' ? '<span>📍 ' + esc(offer.location) + '</span>' : '')
-      + (offer.emailDate ? '<span>📧 ' + esc(fmtDate(offer.emailDate)) + '</span>' : '')
+           + (offer.emailDate ? '<span>📧 ' + esc(fmtDate(offer.emailDate)) + '</span>' : '')
       + '</div></td>'
       + '<td><div class="offer-title">' + esc(offer.title) + '</div>'
       + (offer.description ? '<div class="offer-desc">' + esc(offer.description) + '</div>' : '')

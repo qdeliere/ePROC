@@ -277,7 +277,8 @@
         "Budgets & P&L",
         "Gap Analysis"
       ],
-      "cvDate": "2024-09-09T15:56:35.000Z"
+      "cvDate": "2024-09-09T15:56:35.000Z",
+      "xpYears": 10
     },
     {
       "id": "nina-sastre",
@@ -313,7 +314,8 @@
         "Agile (Scrum)",
         "Data Analysis"
       ],
-      "cvDate": "2026-03-23T10:19:33.000Z"
+      "cvDate": "2026-03-23T10:19:33.000Z",
+      "xpYears": 7
     },
     {
       "id": "junior-cantos",
@@ -355,7 +357,8 @@
         "Supply Chain Management",
         "Go-To-Market Strategy"
       ],
-      "cvDate": "2026-04-14T17:25:08.000Z"
+      "cvDate": "2026-04-14T17:25:08.000Z",
+      "xpYears": 14
     },
     {
       "id": "matthieu-roy",
@@ -396,7 +399,8 @@
         "Team & Partner Coordination",
         "PRINCE2 (in progress)"
       ],
-      "cvDate": "2026-06-02T12:51:29.000Z"
+      "cvDate": "2026-06-02T12:51:29.000Z",
+      "xpYears": 12
     },
     {
       "id": "maud-boreux",
@@ -432,7 +436,8 @@
         "Encadrement d'équipe",
         "Gestion de programme"
       ],
-      "cvDate": "2026-01-05T17:16:40.000Z"
+      "cvDate": "2026-01-05T17:16:40.000Z",
+      "xpYears": 8
     },
     {
       "id": "philomene-scohy",
@@ -470,7 +475,8 @@
         "Change Management",
         "Workshop Facilitation"
       ],
-      "cvDate": "2026-06-02T12:53:12.000Z"
+      "cvDate": "2026-06-02T12:53:12.000Z",
+      "xpYears": 9
     },
     {
       "id": "samuel-aulotte",
@@ -506,7 +512,8 @@
         "Webmastering & SEO",
         "GDPR & EU AI Act compliance"
       ],
-      "cvDate": "2026-05-20T10:32:02.000Z"
+      "cvDate": "2026-05-20T10:32:02.000Z",
+      "xpYears": 6
     },
     {
       "id": "anumta-shaikh",
@@ -541,7 +548,8 @@
         "Financial Reporting",
         "Certification PL-300 (Microsoft)"
       ],
-      "cvDate": "2026-04-30T14:10:41.000Z"
+      "cvDate": "2026-04-30T14:10:41.000Z",
+      "xpYears": 5
     },
     {
       "id": "julie-destexhe",
@@ -578,7 +586,8 @@
         "MS Project",
         "Programme Management (Elia)"
       ],
-      "cvDate": "2026-06-02T12:51:58.000Z"
+      "cvDate": "2026-06-02T12:51:58.000Z",
+      "xpYears": 7
     },
     {
       "id": "ludovic-van-laethem",
@@ -587,7 +596,8 @@
       "photo": null,
       "kw": [],
       "cvSkills": [],
-      "cvDate": null
+      "cvDate": null,
+      "xpYears": null
     }
   ],
   "offers": [
@@ -2775,7 +2785,11 @@
       "verdict": "go",
       "deadline": "2026-07-02",
       "emailDate": "2026-06-03",
-      "note": "⚠️ +10 ans XP coordinateur IT exigés (Senior). Vérifier éligibilité avant soumission."
+      "note": "⚠️ +10 ans XP coordinateur IT exigés (Senior). Vérifier éligibilité avant soumission.",
+      "seniorityRequired": {
+        "years": 10,
+        "label": "Senior (>10 ans coordinateur IT)"
+      }
     },
     {
       "id": "forem",

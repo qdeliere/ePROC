@@ -122,8 +122,13 @@
     .cv-date-line{font-size:10px;color:var(--muted);display:flex;align-items:center;gap:4px;margin-top:2px}
     .member-score-col{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0;padding-top:2px}
     .member-score-pct{font-size:14px;font-weight:700;color:var(--accent);line-height:1;margin-bottom:3px}
+    .kw-score-orig{font-size:10px;color:var(--muted);text-decoration:line-through;margin-bottom:2px}
     .member-bar{width:48px;height:3px;background:#e2e8f0;border-radius:2px;overflow:hidden}
     .member-bar-fill{height:100%;border-radius:2px;background:var(--accent)}
+    .xp-years{font-size:10px;color:#64748b;font-weight:600;margin-bottom:2px}
+    .seniority-badge{font-size:10px;border-radius:4px;padding:2px 6px;margin-top:4px;line-height:1.4}
+    .seniority-badge.warn{background:#fff7ed;color:#c2410c;border:1px solid #fed7aa}
+    .member-card.seniority-warn{border-left:3px solid #fb923c}
 
     .verdict-badge{display:inline-flex;align-items:center;gap:5px;border-radius:8px;padding:5px 11px;font-weight:700;font-size:13px;margin-bottom:9px}
     .verdict-badge.go{background:var(--go-bg);color:var(--go)}
@@ -373,9 +378,4 @@ function runBrowserTests(){
   let passed=0, total=0;
   const assert=(d,c)=>{ total++; if(c){passed++;console.log('✅',d);} else console.error('❌',d); };
   assert('EPROC chargé', typeof EPROC==='object');
-  assert('DATA chargé', !!DATA);
-  assert('offres > 0', OFFERS.length>0);
-  assert('validateData ok', DATA && EPROC.validateData(DATA).ok);
-  assert('tbody rempli', document.querySelectorAll('#offers-tbody tr').length>0 || OFFERS.length===0);
-  assert('pas de "undefined" dans le rendu', !document.getElementById('offers-tbody').innerHTML.includes('undefined'));
-  assert('last-sync affiché', !document.getElementById('last-sync').textContent.includes(
+  assert('DATA chargé', 

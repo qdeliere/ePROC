@@ -80,12 +80,30 @@ assert('HR Rail: ≥1 membre matché', mm.length >= 1);
 assert('HR Rail: max 4 membres', mm.length <= 4);
 assert('scores triés décroissants', mm.every((x, i) => i === 0 || x.score <= mm[i - 1].score));
 assert('score membre ≤ 98', mm.every(x => x.score <= 98));
-assert('score membre ≥ 53 (1 match min)', mm.every(x => x.score >= 53));
 // Régression v0.4.7 : pas de faux positif "ai"/"it" courts
 assert('régr: aucun kw "ai" ou "it" seul', MEMBERS.flatMap(m => m.kw).filter(k => k === 'ai' || k === 'it').length === 0);
 const noMatch = EPROC.matchMembersToOffer({ title: 'zzz xxx yyy', employer: '', description: '', skills: [], tags: [] }, MEMBERS);
 assert('offre sans rapport → 0 membre', noMatch.length === 0);
 assert('Ludovic VL (kw vide) jamais matché', !mm.some(x => x.member.id === 'ludovic-van-laethem'));
+// Séniorité : Julie (7 ans) pénalisée sur HR Rail (>10 ans requis)
+const julieMatch = mm.find(x => x.member.id === 'julie-destexhe');
+if (julieMatch) {
+  assert('Julie HR Rail: seniorityOk === false', julieMatch.seniorityOk === false);
+  assert('Julie HR Rail: score < kwScore (pénalité appliquée)', julieMatch.score < julieMatch.kwScore);
+  assert('Julie HR Rail: score ≥ floor 50%', julieMatch.score >= Math.round(julieMatch.kwScore * 0.50));
+}
+// Offre sans séniorité requise → seniorityOk = null pour tous
+const noSenOffer = { ...hrrail, seniorityRequired: undefined };
+const mmNoSen = EPROC.matchMembersToOffer(noSenOffer, MEMBERS);
+assert('sans seniorityRequired → seniorityOk null', mmNoSen.every(x => x.seniorityOk === null));
+// Membre avec xpYears >= required → seniorityOk = true
+const seniorMember = MEMBERS.find(m => m.xpYears != null && m.xpYears >= 10);
+if (seniorMember) {
+  const seniorMatch = mm.find(x => x.member.id === seniorMember.id);
+  if (seniorMatch) assert('senior member (≥10 ans): seniorityOk === true', seniorMatch.seniorityOk === true);
+}
+// xpYears field présent sur tous les membres
+assert('tous membres ont xpYears défini', MEMBERS.every(m => 'xpYears' in m));
 
 // ════════ 5. Matrice / thèmes ════════
 section('Matrice');
@@ -147,7 +165,6 @@ assert('deadline 3j → urgent', dlCell.includes('urgent'));
 const dlCellOk = EPROC.renderDeadlineCell({ deadline: '2026-09-01' }, '2026-06-12');
 assert('deadline lointaine → ok', dlCellOk.includes('"dl-days ok"') || dlCellOk.includes('dl-days ok'));
 assert('deadline null → tiret', EPROC.renderDeadlineCell({ deadline: null }).includes('—'));
-// XSS : injection dans une offre → échappée
 const evil = { ...OFFERS[0], title: '<script>alert(1)</script>', employer: '<img onerror=x>', description: 'a"b' };
 const evilHtml = EPROC.renderOfferRow(evil, ctx);
 assert('XSS: <script> échappé', !evilHtml.includes('<script>alert'));
