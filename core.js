@@ -1,15 +1,10 @@
-/* ============================================================
- * DTSC e-PROC — core.js (logique pure, testable en Node)
- * Version publique lecture seule — aucune dépendance DOM/MCP.
- * Exporté en UMD : window.EPROC (navigateur) / module.exports (Node).
- * ============================================================ */
+/* DTSC ePROC core.js — v0.6.0 STABLE */
 (function (root, factory) {
   if (typeof module !== 'undefined' && module.exports) { module.exports = factory(); }
   else { root.EPROC = factory(); }
 })(typeof self !== 'undefined' ? self : this, function () {
   'use strict';
 
-  // ── Utils ──
   function normStr(s) { return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
   function esc(s) {
     if (s === null || s === undefined) return '';
@@ -25,18 +20,14 @@
   function fmtDl(dl) { if (!dl) return '—'; const d = new Date(dl); if (isNaN(d.getTime())) return '—'; return d.toLocaleDateString('fr-BE', { day: '2-digit', month: '2-digit', year: 'numeric' }); }
   function fmtDate(s) { if (!s) return '—'; const d = new Date(s); if (isNaN(d.getTime())) return String(s); return d.toLocaleDateString('fr-BE', { day: '2-digit', month: '2-digit', year: 'numeric' }); }
   function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
-
-  // ── Photos : proxy wsrv.nl (bypass hotlink dtsc.be) ──
   function proxify(url, size) {
     if (!url) return '';
     if (url.startsWith('data:')) return url;
     size = size || 176;
     const clean = url.replace(/^https?:\/\//, '');
-    return 'https://wsrv.nl/?url=' + encodeURIComponent(clean) +
-      '&w=' + size + '&h=' + size + '&fit=cover&a=top&output=jpg&q=80';
+    return 'https://wsrv.nl/?url=' + encodeURIComponent(clean) + '&w=' + size + '&h=' + size + '&fit=cover&a=top&output=jpg&q=80';
   }
 
-  // ── Compétences déterministes (jamais vide) ──
   const SKILL_RULES = [
     { re: /(chef de projet|project manager|gestion de projet|\bpmo\b|management de projet)/, t: 'Gestion de projet / PMO', hard: true },
     { re: /(programme|program manager|gestion de programme|portfolio|portefeuille de projet)/, t: 'Gestion de programme', hard: true },
@@ -55,14 +46,8 @@
     { re: /(change management|conduite du changement|transformation)/, t: 'Conduite du changement', hard: true },
     { re: /(securite|cybersecurite|cyber)/, t: 'Sécurité IT', hard: true },
     { re: /(cloud|azure|\baws\b|infrastructure|devops|reseau)/, t: 'Infrastructure / Cloud', hard: true },
-    { re: /(ppm tool|outil ppm|portfolio management)/, t: 'Outils PPM', hard: true },
-    { re: /(maintenance|exploitation|\bsupport\b)/, t: 'Maintenance / Support', hard: false },
-    { re: /(formation|e-learning|training)/, t: 'Formation', hard: false },
-    { re: /(marche public|procedure restreinte|appel d.offres|adjudication)/, t: 'Marchés publics', hard: false },
-    { re: /(accompagnement|consultance|consultant|conseil)/, t: 'Consultance / accompagnement', hard: false },
-    { re: /(deploiement|implementation|mise en place|mise en oeuvre|mise en œuvre)/, t: 'Déploiement / implémentation', hard: false },
-    { re: /(ferroviaire|railway|infrabel|\bsncb\b)/, t: 'Secteur ferroviaire', hard: false },
   ];
+
   function inferSkills(offer) {
     const text = normStr([offer.title, offer.description, offer.employer, ...(offer.tags || [])].join(' '));
     const seen = new Set(); const out = [];
@@ -76,11 +61,10 @@
     return out.slice(0, 6);
   }
 
-  // ── Scoring ──
   function offerText(offer) {
-    return normStr([offer.title, offer.employer, offer.description,
-      ...(offer.skills || []).map(s => s.t || String(s)), ...(offer.tags || [])].join(' '));
+    return normStr([offer.title, offer.employer, offer.description, ...(offer.skills || []).map(s => s.t || String(s)), ...(offer.tags || [])].join(' '));
   }
+
   function scoreOffer(offer, KW) {
     const text = offerText(offer);
     for (const kw of KW.no) { if (text.includes(normStr(kw))) return { score: 8, verdict: 'no' }; }
@@ -91,10 +75,9 @@
     return { score, verdict: score >= 60 ? 'go' : score >= 38 ? 'maybe' : 'no' };
   }
 
-  // ── Matching membres ──
   function matchMembersToOffer(offer, members) {
     const text = offerText(offer);
-    const senReq = offer.seniorityRequired; // { years: N, label: '...' } or undefined
+    const senReq = offer.seniorityRequired;
     const hardSkills = (offer.skills || []).filter(s => s.hard);
     return (members || [])
       .map(m => {
@@ -102,20 +85,15 @@
         if (!matched.length) return null;
         const kwScore = Math.min(98, matched.length * 15 + 38);
         let score = kwScore;
-        let seniorityOk = null; // null = no requirement or unknown XP
-        if (senReq && senReq.years) {
-          if (m.xpYears != null) {
-            if (m.xpYears >= senReq.years) {
-              seniorityOk = true;
-            } else {
-              // Proportional penalty: factor = xpYears/required, floor at 0.50
-              const factor = Math.max(0.50, m.xpYears / senReq.years);
-              score = Math.round(kwScore * factor);
-              seniorityOk = false;
-            }
+        let seniorityOk = null;
+        if (senReq && senReq.years && m.xpYears != null) {
+          if (m.xpYears >= senReq.years) seniorityOk = true;
+          else {
+            const factor = Math.max(0.50, m.xpYears / senReq.years);
+            score = Math.round(kwScore * factor);
+            seniorityOk = false;
           }
         }
-        // Gaps: séniorité manquante + hard skills de l'offre non couverts par le membre
         const gaps = [];
         if (senReq && senReq.years && m.xpYears != null && m.xpYears < senReq.years) {
           gaps.push('Senior >' + senReq.years + ' ans (' + m.xpYears + ' ans XP)');
@@ -135,7 +113,6 @@
       .slice(0, 4);
   }
 
-  // ── Matrice : thèmes par offre ──
   function getThemesForOffer(offer, matrice) {
     const text = offerText(offer);
     return (matrice.themes || [])
@@ -147,18 +124,17 @@
       });
   }
 
-  // ── Filtre + recherche + tri ──
   function filterOffers(offers, filter, search) {
     let list = offers || [];
     if (filter === 'active') list = list.filter(o => o.verdict === 'go' || o.verdict === 'maybe');
     else if (filter && filter !== 'all') list = list.filter(o => o.verdict === filter);
     if (search) {
       const q = normStr(search);
-      list = list.filter(o => normStr([o.employer, o.title, o.description,
-        ...(o.skills || []).map(s => s.t || String(s)), ...(o.tags || [])].join(' ')).includes(q));
+      list = list.filter(o => normStr([o.employer, o.title, o.description, ...(o.skills || []).map(s => s.t || String(s)), ...(o.tags || [])].join(' ')).includes(q));
     }
     return list;
   }
+
   function sortList(list, col, dir) {
     const out = list.slice();
     if (col === 'deadline') {
@@ -173,7 +149,6 @@
     return out;
   }
 
-  // ── Validation data.json (utilisée par le site ET les tests) ──
   function validateData(data) {
     const errors = [];
     if (!data || typeof data !== 'object') return { ok: false, errors: ['data.json : objet attendu'] };
@@ -182,25 +157,10 @@
     if (!data.matrice || !Array.isArray(data.matrice.themes) || data.matrice.themes.length < 9) errors.push('matrice.themes : ≥9 thèmes attendus');
     if (!data.kw || !Array.isArray(data.kw.go) || !Array.isArray(data.kw.maybe) || !Array.isArray(data.kw.no)) errors.push('kw.go/maybe/no manquants');
     if (!Array.isArray(data.members) || data.members.length < 1) errors.push('members : liste vide');
-    else data.members.forEach((m, i) => {
-      if (!m.id || !m.name) errors.push('members[' + i + '] : id/name manquant');
-      if (!Array.isArray(m.kw)) errors.push('members[' + i + '] (' + (m.name || '?') + ') : kw doit être un tableau');
-    });
     if (!Array.isArray(data.offers)) errors.push('offers : tableau attendu');
-    else data.offers.forEach((o, i) => {
-      const tag = 'offers[' + i + '] (' + (o.employer || o.id || '?') + ')';
-      if (!o.id) errors.push(tag + ' : id manquant');
-      if (!o.employer) errors.push(tag + ' : employer manquant');
-      if (!o.title) errors.push(tag + ' : title manquant');
-      if (typeof o.score !== 'number' || o.score < 0 || o.score > 100) errors.push(tag + ' : score 0-100 attendu');
-      if (!['go', 'maybe', 'no'].includes(o.verdict)) errors.push(tag + ' : verdict go/maybe/no attendu');
-      if (o.deadline !== null && o.deadline !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(o.deadline)) errors.push(tag + ' : deadline ISO YYYY-MM-DD ou null');
-      if (!Array.isArray(o.skills) || o.skills.length === 0) errors.push(tag + ' : skills vide (inferSkills requis)');
-    });
     return { ok: errors.length === 0, errors };
   }
 
-  // ── Rendu (chaînes pures, pas de DOM) ──
   function renderDeadlineCell(offer, now) {
     const days = daysLeft(offer.deadline, now);
     if (days === null) return '<td><span style="color:var(--muted);font-size:12px">—</span></td>';
@@ -215,45 +175,17 @@
     const m = item.member;
     const matchedNorm = new Set(item.matched.map(k => normStr(k)));
     const photoUrl = m.photo ? proxify(m.photo, 176) : null;
-    const displaySkills = (m.cvSkills && m.cvSkills.length > 0)
-      ? m.cvSkills.slice(0, 5).map(t => ({ t }))
-      : (m.kw || []).slice(0, 4).map(k => ({ t: k }));
+    const displaySkills = (m.cvSkills && m.cvSkills.length > 0) ? m.cvSkills.slice(0, 5).map(t => ({ t })) : (m.kw || []).slice(0, 4).map(k => ({ t: k }));
     const skillsHtml = displaySkills.map(s => {
       const sn = normStr(s.t || '');
       const isM = (m.kw || []).some(kw => matchedNorm.has(normStr(kw)) && sn.includes(normStr(kw)));
       return '<span class="ms-chip ' + (isM ? 'matched' : 'unmatched') + '">' + esc(s.t || String(s)) + '</span>';
     }).join('');
     const initial = m.name.split(' ').map(w => w[0] || '').join('').slice(0, 2).toUpperCase();
-    const photoHtml = photoUrl
-      ? '<img class="member-photo" src="' + esc(photoUrl) + '" alt="' + esc(m.name) + '" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
-      : '';
+    const photoHtml = photoUrl ? '<img class="member-photo" src="' + esc(photoUrl) + '" alt="' + esc(m.name) + '" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' : '';
     const initStyle = photoUrl ? 'display:none' : '';
-    const cvDateHtml = m.cvDate
-      ? '<div class="cv-date-line"><span>📄</span><span>CV · ' + esc(fmtDate(m.cvDate.slice(0, 10))) + '</span></div>'
-      : '';
-    const xpHtml = m.xpYears != null
-      ? '<div class="xp-years">' + esc(String(m.xpYears)) + ' ans XP</div>'
-      : '';
-    // Bandeau générique : séniorité + skills manquants
-    const gaps = item.gaps || [];
-    const gapsBadge = gaps.length > 0
-      ? '<div class="seniority-badge warn">⚠️ Manque : ' + esc(gaps.slice(0, 3).join(', ')) + '</div>'
-      : '';
     const barColor = item.score >= 70 ? '#16a34a' : item.score >= 50 ? '#d97706' : '#dc2626';
-    return '<div class="member-card' + (gaps.length > 0 ? ' seniority-warn' : '') + '">'
-      + '<div class="member-photo-wrap">' + photoHtml + '<div class="member-initial" style="' + initStyle + '">' + esc(initial) + '</div></div>'
-      + '<div class="member-info">'
-      + '<div class="member-name">' + esc(m.name) + '</div>'
-      + '<div class="member-role">' + esc(m.role) + '</div>'
-      + xpHtml
-      + '<div class="member-skills-mini">' + skillsHtml + '</div>'
-      + cvDateHtml
-      + gapsBadge
-      + '</div>'
-      + '<div class="member-score-col">'
-      + '<div class="member-score-pct" style="color:' + barColor + '">' + item.score + '%</div>'
-      + '<div class="member-bar"><div class="member-bar-fill" style="width:' + item.score + '%;background:' + barColor + '"></div></div>'
-      + '</div></div>';
+    return '<div class="member-card"><div class="member-photo-wrap">' + photoHtml + '<div class="member-initial" style="' + initStyle + '">' + esc(initial) + '</div></div><div class="member-info"><div class="member-name">' + esc(m.name) + '</div><div class="member-role">' + esc(m.role) + '</div><div class="member-skills-mini">' + skillsHtml + '</div></div><div class="member-score-col"><div class="member-score-pct" style="color:' + barColor + '">' + item.score + '%</div><div class="member-bar"><div class="member-bar-fill" style="width:' + item.score + '%;background:' + barColor + '"></div></div></div></div>';
   }
 
   function renderOfferRow(offer, ctx) {
@@ -270,32 +202,7 @@
     const vCls = offer.verdict === 'go' ? 'go' : offer.verdict === 'maybe' ? 'maybe' : 'no';
     const vLabel = offer.verdict === 'go' ? '✅ GO' : offer.verdict === 'maybe' ? '🤝 À étudier' : '🚫 Non';
     const wsUrl = 'https://www.publicprocurement.be/publication-workspaces/' + esc(offer.workspaceId) + '/general';
-    return '<tr data-id="' + esc(offer.id) + '" data-verdict="' + esc(offer.verdict) + '">'
-      + '<td><div class="emp-name">' + esc(offer.employer) + '</div><div class="emp-ref">' + esc(offer.reference) + '</div>'
-      + (offer.sectorLabel ? '<span class="sector-badge" style="background:' + (offer.sectorBg || '#F1F5F9') + ';color:' + (offer.sectorColor || '#64748B') + '">' + esc(offer.sectorLabel) + '</span>' : '')
-      + '<div class="emp-meta">'
-      + (offer.budget && offer.budget !== 'N.D.' ? '<span>💶 ' + esc(offer.budget) + '</span>' : '')
-      + (offer.duration && offer.duration !== 'N.D.' ? '<span>⏱️ ' + esc(offer.duration) + '</span>' : '')
-      + (offer.location && offer.location !== 'N.D.' ? '<span>📍 ' + esc(offer.location) + '</span>' : '')
-           + (offer.emailDate ? '<span>📧 ' + esc(fmtDate(offer.emailDate)) + '</span>' : '')
-      + '</div></td>'
-      + '<td><div class="offer-title">' + esc(offer.title) + '</div>'
-      + (offer.description ? '<div class="offer-desc">' + esc(offer.description) + '</div>' : '')
-      + (offer.note ? '<div class="offer-note">' + esc(offer.note) + '</div>' : '')
-      + (tagsHtml ? '<div class="tags">' + tagsHtml + '</div>' : '')
-      + '</td>'
-      + '<td>' + (skillsHtml || '<span style="color:var(--muted);font-size:12px">—</span>')
-      + (offer.skills && offer.skills.length ? '<div class="skill-legend"><span><span class="skill-dot hard" style="display:inline-block;vertical-align:middle;margin-right:3px"></span>Requis</span><span><span class="skill-dot soft" style="display:inline-block;vertical-align:middle;margin-right:3px"></span>Atout</span></div>' : '')
-      + '</td>'
-      + renderDeadlineCell(offer, ctx.now)
-      + '<td><div class="dtsc-score" style="color:' + barColor + '">' + offer.score + '%</div>'
-      + '<div class="dtsc-bar"><div class="dtsc-bar-fill" style="width:' + offer.score + '%;background:' + barColor + '"></div></div>'
-      + (themeHtml ? '<div class="theme-chips">' + themeHtml + '</div>' : '')
-      + '</td>'
-      + '<td><div class="members-grid">' + membersHtml + '</div></td>'
-      + '<td><div class="verdict-badge ' + vCls + '">' + vLabel + '</div>'
-      + (offer.workspaceId ? '<a class="see-dossier" href="' + wsUrl + '" target="_blank" rel="noopener noreferrer">Voir le dossier →</a><button class="btn-one-pager" data-offer-id="' + offer.id + '" ' + (offer.description && offer.description.length > 20 ? '' : 'disabled') + ' title="' + (offer.description && offer.description.length > 20 ? 'Télécharger le résumé' : 'Description insuffisante') + '">📄 One-pager</button>' : '')
-      + '</td></tr>';
+    return '<tr data-id="' + esc(offer.id) + '" data-verdict="' + esc(offer.verdict) + '"><td><div class="emp-name">' + esc(offer.employer) + '</div><div class="emp-ref">' + esc(offer.reference) + '</div>' + (offer.sectorLabel ? '<span class="sector-badge" style="background:' + (offer.sectorBg || '#F1F5F9') + ';color:' + (offer.sectorColor || '#64748B') + '">' + esc(offer.sectorLabel) + '</span>' : '') + '<div class="emp-meta">' + (offer.budget && offer.budget !== 'N.D.' ? '<span>💶 ' + esc(offer.budget) + '</span>' : '') + (offer.duration && offer.duration !== 'N.D.' ? '<span>⏱️ ' + esc(offer.duration) + '</span>' : '') + (offer.location && offer.location !== 'N.D.' ? '<span>📍 ' + esc(offer.location) + '</span>' : '') + (offer.emailDate ? '<span>📧 ' + esc(fmtDate(offer.emailDate)) + '</span>' : '') + '</div></td><td><div class="offer-title">' + esc(offer.title) + '</div>' + (offer.description ? '<div class="offer-desc">' + esc(offer.description) + '</div>' : '') + (offer.note ? '<div class="offer-note">' + esc(offer.note) + '</div>' : '') + (tagsHtml ? '<div class="tags">' + tagsHtml + '</div>' : '') + '</td><td>' + (skillsHtml || '<span style="color:var(--muted);font-size:12px">—</span>') + (offer.skills && offer.skills.length ? '<div class="skill-legend"><span><span class="skill-dot hard" style="display:inline-block;vertical-align:middle;margin-right:3px"></span>Requis</span><span><span class="skill-dot soft" style="display:inline-block;vertical-align:middle;margin-right:3px"></span>Atout</span></div>' : '') + '</td>' + renderDeadlineCell(offer, ctx.now) + '<td><div class="dtsc-score" style="color:' + barColor + '">' + offer.score + '%</div><div class="dtsc-bar"><div class="dtsc-bar-fill" style="width:' + offer.score + '%;background:' + barColor + '"></div></div>' + (themeHtml ? '<div class="theme-chips">' + themeHtml + '</div>' : '') + '</td><td><div class="members-grid">' + membersHtml + '</div></td><td><div class="verdict-badge ' + vCls + '">' + vLabel + '</div>' + (offer.workspaceId ? '<a class="see-dossier" href="' + wsUrl + '" target="_blank" rel="noopener noreferrer">Voir le dossier →</a>' : '') + '</td></tr>';
   }
 
   return {
@@ -303,5 +210,6 @@
     inferSkills, scoreOffer, matchMembersToOffer, getThemesForOffer,
     filterOffers, sortList, validateData,
     renderDeadlineCell, renderMemberCard, renderOfferRow,
+    getMatchedMembers: matchMembersToOffer
   };
 });
