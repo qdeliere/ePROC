@@ -161,11 +161,6 @@
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     ::-webkit-scrollbar{width:5px;height:5px}
     ::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
-    .btn-one-pager.loading{opacity:.6;cursor:wait;pointer-events:none}
-    .btn-one-pager.loading::after{content:' ⏳';animation:pulse 1s infinite}
-    @keyframes pulse{0%{opacity:1}50%{opacity:.5}100%{opacity:1}}
-    #onepager-progress{display:none;position:fixed;top:0;left:0;right:0;height:3px;background:#f97316;transition:width .3s}
-    #onepager-progress.active{display:block}
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
@@ -406,183 +401,65 @@ document.addEventListener('DOMContentLoaded', () => {
 async function generateOnePagerPDF(offerId, event){
   if(event) event.preventDefault();
   
-  const btn = event ? event.target : document.querySelector('[data-offer-id="' + offerId + '"]');
-  const progressBar = document.getElementById('onepager-progress');
-  
-  try {
-    // Set loading state
-    if(btn) {
-      btn.classList.add('loading');
-      btn.disabled = true;
-    }
-    if(progressBar) progressBar.classList.add('active');
-    
-    // Progress callback
-    const updateProgress = (p) => {
-      if(progressBar) progressBar.style.width = Math.min(p.percent, 99) + '%';
-      if(btn) btn.textContent = '📄 ' + (p.status || 'Generating...');
-    };
-    
-    // Fetch offer data
-    const offer = OFFERS.find(o => o.id === offerId);
-    if(!offer || !offer.description || offer.description.length < 20) {
-      if(btn) btn.classList.remove('loading');
-      if(progressBar) progressBar.classList.remove('active');
-      return;
-    }
-    
-    updateProgress({ status: 'Downloading documents...', percent: 15 });
-    
-    // Attempt to fetch dossier documents
-    const downloadedDocs = await EPROC.fetchDossierDocuments(offer.workspaceId, offerId, updateProgress);
-    
-    // Analyze documents if any were found
-    let enrichedData = {};
-    if(downloadedDocs && downloadedDocs.length > 0) {
-      updateProgress({ status: 'Analyzing documents...', percent: 70 });
-      const analysis = await EPROC.analyzeDossier(offerId);
-      enrichedData = analysis;
-    }
-    
-    // Generate PDF with enriched data
-    updateProgress({ status: 'Generating PDF...', percent: 85 });
-    
-    await new Promise(resolve => setTimeout(resolve, 100)); // Ensure html2pdf is ready
-    
-    if(typeof window.html2pdf === 'undefined') {
-      await new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
-        script.async = true;
-        script.onload = () => {
-          if(typeof window.html2pdf !== 'undefined') resolve();
-          else fetch(script.src).then(r => r.text()).then(code => eval(code)).then(resolve).catch(reject);
-        };
-        script.onerror = reject;
-        document.head.appendChild(script);
-      });
-    }
-    
-    const members = EPROC.getMatchedMembers(offer, DATA.members);
-    const verdictText = offer.verdict==='go' ? '✅ À APPROFONDIR' : offer.verdict==='maybe' ? '🤝 À ÉTUDIER' : '🚫 FAIBLE INTÉRÊT';
-    
-    const documentsSection = enrichedData.documentCount ? `
-      <div style="margin-bottom: 30px; background: #f0fdf4; border-left: 4px solid #16a34a; padding: 15px;">
-        <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 14px; text-transform: uppercase; font-weight: bold;">📄 DOCUMENTS ANALYSÉS</h3>
-        <p style="margin: 0; font-size: 12px; color: #666;">` + enrichedData.documentCount + ` document(s) téléchargé(s) et analysé(s) depuis le dossier</p>
-      </div>
-    ` : '';
-    
-    const html = `
-      <div style="font-family: Arial, sans-serif; color: #333; padding: 40px; max-width: 800px; margin: 0 auto;">
-        <div style="border-bottom: 3px solid #f97316; padding-bottom: 20px; margin-bottom: 30px;">
-          <div style="color: #f97316; font-weight: bold; font-size: 14px; margin-bottom: 5px;">MARCHÉ PUBLIC</div>
-          <h1 style="margin: 0; font-size: 24px; line-height: 1.3;">${EPROC.esc(offer.title)}</h1>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
-          <div>
-            <h3 style="margin: 0 0 10px 0; color: #666; font-size: 12px; text-transform: uppercase; font-weight: bold;">EMPLOYEUR</h3>
-            <div style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">${EPROC.esc(offer.employer)}</div>
-            ${offer.sectorLabel ? '<div style="color: #666; font-size: 13px;">' + EPROC.esc(offer.sectorLabel) + '</div>' : ''}
-          </div>
-          <div>
-            <h3 style="margin: 0 0 10px 0; color: #666; font-size: 12px; text-transform: uppercase; font-weight: bold;">VERDICT DTSC</h3>
-            <div style="font-size: 16px; font-weight: bold; color: ${offer.verdict==='go' ? '#16a34a' : offer.verdict==='maybe' ? '#d97706' : '#dc2626'};">${verdictText}</div>
-            <div style="font-size: 24px; font-weight: bold; color: #f97316; margin-top: 8px;">${offer.score}%</div>
-          </div>
-        </div>
-        
-        ${documentsSection}
-        
-        <div style="background: #f8fafc; border-left: 4px solid #f97316; padding: 15px; margin-bottom: 30px;">
-          <h3 style="margin: 0 0 10px 0; color: #666; font-size: 12px; text-transform: uppercase; font-weight: bold;">INFORMATIONS CLÉS</h3>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 13px;">
-            ${offer.deadline ? '<div><strong>📅 Deadline:</strong> ' + EPROC.fmtDl(offer.deadline) + '</div>' : ''}
-            ${offer.budget && offer.budget !== 'N.D.' ? '<div><strong>💶 Budget:</strong> ' + EPROC.esc(offer.budget) + '</div>' : ''}
-            ${offer.duration && offer.duration !== 'N.D.' ? '<div><strong>⏱️ Durée:</strong> ' + EPROC.esc(offer.duration) + '</div>' : ''}
-            ${offer.location && offer.location !== 'N.D.' ? '<div><strong>📍 Localisation:</strong> ' + EPROC.esc(offer.location) + '</div>' : ''}
-            ${offer.reference ? '<div><strong>Réf:</strong> ' + EPROC.esc(offer.reference) + '</div>' : ''}
-          </div>
-        </div>
-        
-        <div style="margin-bottom: 30px;">
-          <h3 style="margin: 0 0 15px 0; color: #1e293b; font-size: 14px; text-transform: uppercase; font-weight: bold; border-bottom: 2px solid #f97316; padding-bottom: 8px;">DESCRIPTION</h3>
-          <p style="margin: 0; line-height: 1.6; color: #555; font-size: 13px;">${EPROC.esc(offer.description || 'N.D.')}</p>
-        </div>
-        
-        ${offer.tags && offer.tags.length > 0 ? `
-        <div style="margin-bottom: 30px;">
-          <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 14px; text-transform: uppercase; font-weight: bold;">CONDITIONS DE PARTICIPATION</h3>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            ${offer.tags.map(t => '<span style="background: #f1f5f9; color: #64748b; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: 500;">' + EPROC.esc(t) + '</span>').join('')}
-          </div>
-        </div>
-        ` : ''}
-        
-        ${offer.skills && offer.skills.length > 0 ? `
-        <div style="margin-bottom: 30px;">
-          <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 14px; text-transform: uppercase; font-weight: bold;">COMPÉTENCES REQUISES</h3>
-          <ul style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.8;">
-            ${offer.skills.map(s => '<li style="color: ' + (s.hard ? '#dc2626' : '#666') + '; font-weight: ' + (s.hard ? 'bold' : 'normal') + ';">' + EPROC.esc(s.t) + (s.hard ? ' <span style="font-size: 11px;">(requis)</span>' : '') + '</li>').join('')}
-          </ul>
-        </div>
-        ` : ''}
-        
-        ${members && members.length > 0 ? `
-        <div style="margin-bottom: 30px;">
-          <h3 style="margin: 0 0 15px 0; color: #1e293b; font-size: 14px; text-transform: uppercase; font-weight: bold; border-bottom: 2px solid #3b82f6; padding-bottom: 8px;">TOP CONSULTANTS DTSC</h3>
-          ${members.slice(0, 3).map(m => `
-            <div style="margin-bottom: 12px; padding: 10px; background: #f0f9ff; border-left: 3px solid #3b82f6; border-radius: 3px;">
-              <div style="font-weight: bold; font-size: 13px;">${EPROC.esc(m.member.name)}</div>
-              <div style="font-size: 12px; color: #666;">${EPROC.esc(m.member.role)}</div>
-              <div style="font-size: 13px; font-weight: bold; color: #f97316; margin-top: 5px;">${m.score}% de correspondance</div>
-            </div>
-          `).join('')}
-        </div>
-        ` : ''}
-        
-        <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 11px; color: #94a3b8;">
-          <p>Document généré automatiquement par DTSC e-PROC Dashboard le ${new Date().toLocaleDateString('fr-BE')}.</p>
-          <p><strong>Source:</strong> <a href="https://www.publicprocurement.be/publication-workspaces/${offer.workspaceId}/general" style="color: #3b82f6; text-decoration: none;">Consulter le dossier complet</a></p>
-          ${enrichedData.documentCount ? '<p><strong>Documents inclus:</strong> ' + enrichedData.documentCount + ' document(s) analysé(s)</p>' : ''}
-        </div>
-      </div>
-    `;
-    
-    const opt = {
-      margin: 10,
-      filename: 'one-pager-' + (offer.id || 'offre') + '.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
-    };
-    
-    html2pdf().set(opt).from(html).save();
-    
-    updateProgress({ status: 'Complete ✓', percent: 100 });
-    
-    setTimeout(() => {
-      if(btn) {
-        btn.classList.remove('loading');
-        btn.disabled = false;
-        btn.textContent = '📄 One-pager';
-      }
-      if(progressBar) progressBar.classList.remove('active');
-    }, 1500);
-    
-  } catch (e) {
-    console.error('One-Pager error:', e);
-    if(btn) {
-      btn.classList.remove('loading');
-      btn.disabled = false;
-      btn.textContent = '📄 Error - retry';
-    }
-    if(progressBar) {
-      progressBar.classList.remove('active');
-      progressBar.style.background = '#dc2626';
-    }
+  // Ensure html2pdf is loaded
+  if(typeof window.html2pdf === 'undefined') {
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+      script.async = true;
+      script.onload = () => {
+        if(typeof window.html2pdf !== 'undefined') resolve();
+        else fetch(script.src).then(r => r.text()).then(code => eval(code)).then(resolve).catch(reject);
+      };
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
   }
+  const offer = OFFERS.find(o => o.id === offerId);
+  if(!offer || !offer.description || offer.description.length < 20) return;
+
+  const verdictText = offer.verdict==='go' ? '✅ À APPROFONDIR' : offer.verdict==='maybe' ? '🤝 À ÉTUDIER' : '🚫 FAIBLE INTÉRÊT';
+
+  const html = `
+    <div style="font-family: Arial, sans-serif; color: #333; padding: 40px; max-width: 800px; margin: 0 auto;">
+      <div style="border-bottom: 3px solid #f97316; padding-bottom: 20px; margin-bottom: 30px;">
+        <div style="color: #f97316; font-weight: bold; font-size: 14px; margin-bottom: 5px;">MARCHÉ PUBLIC</div>
+        <h1 style="margin: 0; font-size: 24px; line-height: 1.3;">${EPROC.esc(offer.title)}</h1>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+        <div>
+          <h3 style="margin: 0 0 10px 0; color: #666; font-size: 12px; text-transform: uppercase; font-weight: bold;">EMPLOYEUR</h3>
+          <div style="font-size: 16px; font-weight: bold;">${EPROC.esc(offer.employer)}</div>
+          ${offer.sectorLabel ? '<div style="color: #666; font-size: 13px; margin-top: 5px;">' + EPROC.esc(offer.sectorLabel) + '</div>' : ''}
+        </div>
+        <div>
+          <h3 style="margin: 0 0 10px 0; color: #666; font-size: 12px; text-transform: uppercase; font-weight: bold;">VERDICT DTSC</h3>
+          <div style="font-size: 16px; font-weight: bold; color: ${offer.verdict==='go' ? '#16a34a' : offer.verdict==='maybe' ? '#d97706' : '#dc2626'};">${verdictText}</div>
+          <div style="font-size: 24px; font-weight: bold; color: #f97316; margin-top: 8px;">${offer.score}%</div>
+        </div>
+      </div>
+      <div style="background: #f8fafc; border-left: 4px solid #f97316; padding: 15px; margin-bottom: 30px;">
+        <h3 style="margin: 0 0 10px 0; color: #666; font-size: 12px; text-transform: uppercase; font-weight: bold;">INFOS CLÉS</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 13px;">
+          ${offer.deadline ? '<div><strong>📅 Deadline:</strong> ' + EPROC.fmtDl(offer.deadline) + '</div>' : ''}
+          ${offer.budget && offer.budget !== 'N.D.' ? '<div><strong>💶 Budget:</strong> ' + EPROC.esc(offer.budget) + '</div>' : ''}
+          ${offer.duration && offer.duration !== 'N.D.' ? '<div><strong>⏱️ Durée:</strong> ' + EPROC.esc(offer.duration) + '</div>' : ''}
+          ${offer.location && offer.location !== 'N.D.' ? '<div><strong>📍 Lieu:</strong> ' + EPROC.esc(offer.location) + '</div>' : ''}
+        </div>
+      </div>
+      <div style="margin-bottom: 30px;">
+        <h3 style="margin: 0 0 15px 0; color: #1e293b; font-size: 14px; text-transform: uppercase; font-weight: bold; border-bottom: 2px solid #f97316; padding-bottom: 8px;">DESCRIPTION</h3>
+        <p style="margin: 0; line-height: 1.6; color: #555; font-size: 13px;">${EPROC.esc(offer.description || 'N.D.')}</p>
+      </div>
+      ${offer.tags && offer.tags.length > 0 ? '<div style="margin-bottom: 30px;"><h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 14px; text-transform: uppercase; font-weight: bold;">CONDITIONS</h3><div style="display: flex; flex-wrap: wrap; gap: 8px;">' + offer.tags.map(t => '<span style="background: #f1f5f9; color: #64748b; padding: 5px 10px; border-radius: 4px; font-size: 12px;">' + EPROC.esc(t) + '</span>').join('') + '</div></div>' : ''}
+      <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 11px; color: #94a3b8;">
+        <p>Généré le ${new Date().toLocaleDateString('fr-BE')} • <a href="https://www.publicprocurement.be/publication-workspaces/${offer.workspaceId}/general" style="color: #3b82f6;">Consulter le dossier complet</a></p>
+      </div>
+    </div>
+  `;
+
+  const opt = { margin: 10, filename: 'one-pager-' + (offer.id || 'offre') + '.pdf', image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2 }, jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' } };
+  html2pdf().set(opt).from(html).save();
 }
 
 function runBrowserTests(){
@@ -601,6 +478,5 @@ function runBrowserTests(){
   return {passed, total};
 }
 </script>
-<div id="onepager-progress"></div>
 </body>
 </html>
