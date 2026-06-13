@@ -398,8 +398,23 @@ document.addEventListener('DOMContentLoaded', () => {
 // ── Smoke tests navigateur — ?debug=tests (la suite complète est dans tests/run-tests.js) ──
 
 // ── One-Pager PDF Generation ──
-function generateOnePagerPDF(offerId, event){
+async function generateOnePagerPDF(offerId, event){
   if(event) event.preventDefault();
+  
+  // Ensure html2pdf is loaded
+  if(typeof window.html2pdf === 'undefined') {
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+      script.async = true;
+      script.onload = () => {
+        if(typeof window.html2pdf !== 'undefined') resolve();
+        else fetch(script.src).then(r => r.text()).then(code => eval(code)).then(resolve).catch(reject);
+      };
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+  }
   const offer = OFFERS.find(o => o.id === offerId);
   if(!offer || !offer.description || offer.description.length < 20) return;
 
