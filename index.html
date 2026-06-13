@@ -283,13 +283,19 @@ function renderOffers(){
     if(filtered.length === 0){ tbody.innerHTML=''; empty.classList.add('visible'); }
     else { empty.classList.remove('visible'); tbody.innerHTML = filtered.map(o=>EPROC.renderOfferRow(o, ctx)).join(''); }
     // Attach click handlers to one-pager buttons
-    document.querySelectorAll('.btn-one-pager').forEach(btn => {
-      btn.onclick = (e) => {
-        e.preventDefault();
-        const offerId = btn.getAttribute('data-offer-id');
-        generateOnePagerPDF(offerId, e);
-      };
-    });
+    setTimeout(() => {
+      document.querySelectorAll('.btn-one-pager').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const offerId = btn.getAttribute('data-offer-id');
+          if(typeof generateOnePagerPDF === 'function') {
+            generateOnePagerPDF(offerId, e);
+          } else {
+            console.error('generateOnePagerPDF is not defined');
+          }
+        });
+      });
+    }, 0);
   }catch(e){
     showError('Erreur de rendu : ' + e.message);
     return;
