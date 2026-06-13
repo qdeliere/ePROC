@@ -234,6 +234,7 @@
       + '</div></td>'
       + '<td><div class="offer-title">' + esc(offer.title) + '</div>'
       + (offer.description ? '<div class="offer-desc">' + esc(offer.description) + '</div>' : '')
+      + (offer.note ? '<div class="offer-note">' + esc(offer.note) + '</div>' : '')
       + (tagsHtml ? '<div class="tags">' + tagsHtml + '</div>' : '')
       + '</td>'
       + '<td>' + (skillsHtml || '<span style="color:var(--muted);font-size:12px">—</span>')

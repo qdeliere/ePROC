@@ -80,6 +80,7 @@
 
     .offer-title{font-weight:700;font-size:13px;margin-bottom:5px;line-height:1.4}
     .offer-desc{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:7px}
+    .offer-note{font-size:11.5px;color:#b45309;background:#fffbeb;border:1px solid #fcd34d;border-radius:5px;padding:4px 8px;margin:5px 0 6px;line-height:1.4}
     .tags{display:flex;flex-wrap:wrap;gap:4px}
     .tag{background:#f1f5f9;color:var(--muted);border-radius:4px;padding:2px 7px;font-size:11px}
 
@@ -377,11 +378,4 @@ function runBrowserTests(){
   assert('validateData ok', DATA && EPROC.validateData(DATA).ok);
   assert('tbody rempli', document.querySelectorAll('#offers-tbody tr').length>0 || OFFERS.length===0);
   assert('pas de "undefined" dans le rendu', !document.getElementById('offers-tbody').innerHTML.includes('undefined'));
-  assert('last-sync affiché', !document.getElementById('last-sync').textContent.includes('— Invalid'));
-  console.log('📊 ' + passed + '/' + total + ' tests passés');
-  console.groupEnd();
-  return {passed, total};
-}
-</script>
-</body>
-</html>
+  assert('last-sync affiché', !document.getElementById('last-sync').textContent.includes(

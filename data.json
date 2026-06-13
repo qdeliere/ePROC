@@ -2741,7 +2741,7 @@
       "duration": "27 mois · 5j/sem (oct.2026→déc.2028)",
       "location": "Bruxelles",
       "title": "Consultant coordinateur — Migration IT (Soins de santé & assurabilité)",
-      "description": "Coordinateur de projet (sans autorité hiérarchique) pour migration IT de la CSS. Mission : alignement priorités/sponsors, reporting management, conseil risques, coordination inter-équipes, PMO général. Oct. 2026 → déc. 2028 inclus, 5j/semaine. Procédure restreinte + accord-cadre.",
+      "description": "Coordinateur de projet (sans autorité hiérarchique) pour migration IT de la CSS. Mission : alignement priorités/sponsors, reporting management, conseil risques, coordination inter-équipes, PMO général. Oct. 2026 → déc. 2028 inclus, 5j/semaine. Procédure restreinte + accord-cadre. ⚠️ Séniorité requise : +10 ans (Senior) en tant que coordinateur de projet IT.",
       "tags": [
         "PMO",
         "Migration IT",
@@ -2774,7 +2774,8 @@
       "score": 85,
       "verdict": "go",
       "deadline": "2026-07-02",
-      "emailDate": "2026-06-03"
+      "emailDate": "2026-06-03",
+      "note": "⚠️ +10 ans XP coordinateur IT exigés (Senior). Vérifier éligibilité avant soumission."
     },
     {
       "id": "forem",
