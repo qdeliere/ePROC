@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(init)
     .catch(e => {
       console.error('[fetch data.json]', e);
-      showError('Impossible de charger les données (' + e.message + '). Réessayez dans quelques minutes ou contactez quentin.deliere@dtsc.be.');
+      alert('❌ DATA.JSON LOAD FAILED'); showError('Impossible de charger les données (' + e.message + '). Réessayez dans quelques minutes ou contactez quentin.deliere@dtsc.be.');
     });
 
   if(new URLSearchParams(location.search).get('debug')==='tests') setTimeout(runBrowserTests, 800);
