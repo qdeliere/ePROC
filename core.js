@@ -95,6 +95,7 @@
   function matchMembersToOffer(offer, members) {
     const text = offerText(offer);
     const senReq = offer.seniorityRequired; // { years: N, label: '...' } or undefined
+    const hardSkills = (offer.skills || []).filter(s => s.hard);
     return (members || [])
       .map(m => {
         const matched = (m.kw || []).filter(kw => text.includes(normStr(kw)));
@@ -112,11 +113,22 @@
               score = Math.round(kwScore * factor);
               seniorityOk = false;
             }
-          } else {
-            seniorityOk = null; // XP unknown — no penalty, but flag shown
           }
         }
-        return { member: m, matched, score, kwScore, seniorityOk };
+        // Gaps: séniorité manquante + hard skills de l'offre non couverts par le membre
+        const gaps = [];
+        if (senReq && senReq.years && m.xpYears != null && m.xpYears < senReq.years) {
+          gaps.push('Senior >' + senReq.years + ' ans (' + m.xpYears + ' ans XP)');
+        }
+        const allKw = (m.kw || []).map(k => normStr(k));
+        hardSkills.forEach(s => {
+          if (gaps.length >= 3) return;
+          const sn = normStr(s.t);
+          const words = sn.split(/[\s\/\-,()]+/).filter(w => w.length > 3);
+          const covered = allKw.some(kw => { const kn = normStr(kw); return sn.includes(kn) || kn.includes(sn) || words.some(w => kn.includes(w)); });
+          if (!covered) gaps.push(s.t);
+        });
+        return { member: m, matched, score, kwScore, seniorityOk, gaps };
       })
       .filter(Boolean)
       .sort((a, b) => b.score - a.score)
@@ -219,19 +231,16 @@
     const cvDateHtml = m.cvDate
       ? '<div class="cv-date-line"><span>📄</span><span>CV · ' + esc(fmtDate(m.cvDate.slice(0, 10))) + '</span></div>'
       : '';
-    // Seniority badge
     const xpHtml = m.xpYears != null
       ? '<div class="xp-years">' + esc(String(m.xpYears)) + ' ans XP</div>'
       : '';
-    let senBadge = '';
-    if (item.seniorityOk === false) {
-      senBadge = '<div class="seniority-badge warn">⚠️ ' + esc(m.xpYears + ' ans / ' + item.member.xpYears + ' requis') + '</div>';
-      // Simpler: show actual vs required
-      const req = item.kwScore ? Math.round(item.kwScore * 1) : '?'; // suppress unused var lint
-      senBadge = '<div class="seniority-badge warn">⚠️ ' + esc(String(m.xpYears)) + ' ans XP — séniorité insuffisante</div>';
-    }
+    // Bandeau générique : séniorité + skills manquants
+    const gaps = item.gaps || [];
+    const gapsBadge = gaps.length > 0
+      ? '<div class="seniority-badge warn">⚠️ Manque : ' + esc(gaps.slice(0, 3).join(', ')) + '</div>'
+      : '';
     const barColor = item.score >= 70 ? '#16a34a' : item.score >= 50 ? '#d97706' : '#dc2626';
-    return '<div class="member-card' + (item.seniorityOk === false ? ' seniority-warn' : '') + '">'
+    return '<div class="member-card' + (gaps.length > 0 ? ' seniority-warn' : '') + '">'
       + '<div class="member-photo-wrap">' + photoHtml + '<div class="member-initial" style="' + initStyle + '">' + esc(initial) + '</div></div>'
       + '<div class="member-info">'
       + '<div class="member-name">' + esc(m.name) + '</div>'
@@ -239,11 +248,10 @@
       + xpHtml
       + '<div class="member-skills-mini">' + skillsHtml + '</div>'
       + cvDateHtml
-      + senBadge
+      + gapsBadge
       + '</div>'
       + '<div class="member-score-col">'
       + '<div class="member-score-pct" style="color:' + barColor + '">' + item.score + '%</div>'
-      + (item.kwScore && item.kwScore !== item.score ? '<div class="kw-score-orig">KW: ' + item.kwScore + '%</div>' : '')
       + '<div class="member-bar"><div class="member-bar-fill" style="width:' + item.score + '%;background:' + barColor + '"></div></div>'
       + '</div></div>';
   }
