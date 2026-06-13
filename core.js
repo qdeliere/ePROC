@@ -298,13 +298,6 @@
       + '</td></tr>';
   }
 
-  return {
-    normStr, esc, daysLeft, fmtDl, fmtDate, debounce, proxify,
-    inferSkills, scoreOffer, matchMembersToOffer, getThemesForOffer,
-    filterOffers, sortList, validateData,
-    renderDeadlineCell, renderMemberCard, renderOfferRow,
-  };
-});
 
   // ── Document Cache & Analysis (v0.6.1) ──
   const DocCache = {
@@ -330,7 +323,6 @@
     set: async function(offerId, docId, content, metadata) {
       const id = offerId + '::' + docId;
       const doc = { id, offerId, docId, content, metadata, cached: new Date().toISOString() };
-      
       if (this.db) {
         return new Promise((resolve, reject) => {
           const tx = this.db.transaction('documents', 'readwrite');
@@ -384,19 +376,13 @@
   async function fetchDossierDocuments(workspaceId, offerId, onProgress) {
     onProgress = onProgress || (() => {});
     onProgress({ status: 'Downloading tender documents...', percent: 10 });
-    
-    // Check cache first
     const cached = await DocCache.list(offerId);
     if (cached.length > 0) {
       console.log('Using cached documents for', offerId);
       onProgress({ status: 'Using cached documents', percent: 100 });
       return cached;
     }
-    
     onProgress({ status: 'Fetching dossier from publicprocurement.be...', percent: 20 });
-    
-    // For now, return empty (implementation pending proper CORS solution)
-    // In production, would fetch via API or Claude in Chrome
     return [];
   }
 
@@ -411,7 +397,9 @@
 
   return {
     normStr, esc, daysLeft, fmtDl, fmtDate, debounce, proxify,
-    SKILL_RULES, scoreOffer, extractSkills, getMatchedMembers, sortOffers, filterOffers,
+    inferSkills, scoreOffer, matchMembersToOffer, getThemesForOffer,
+    filterOffers, sortList, validateData,
+    renderDeadlineCell, renderMemberCard, renderOfferRow,
     DocCache, fetchDossierDocuments, analyzeDossier
   };
 });
