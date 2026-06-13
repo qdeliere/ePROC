@@ -2,9 +2,9 @@
   "meta": {
     "siteVersion": "1.0.0",
     "artifactVersion": "0.5.9",
-    "lastSync": "2026-06-12T12:49:12.431Z",
-    "generatedAt": "2026-06-12T12:49:12.432Z",
-    "source": "Sync Cowork 12/06/2026 — 9 emails ePROC (03/06→10/06) + pages publicprocurement.be (Chrome) + CVs SharePoint (aucun delta)"
+    "lastSync": "2026-06-13T07:02:47.762811Z",
+    "generatedAt": "2026-06-13T07:02:47.762811Z",
+    "source": "Sync Cowork 13/06/2026 — 1 email ePROC (12/06) → 8 nouvelles offres + CVs SharePoint (aucun delta)"
   },
   "matrice": {
     "poles": [
@@ -591,6 +591,263 @@
     }
   ],
   "offers": [
+    {
+      "id": "965be0bb-77bc-44b6-a83a-6d21dba00608",
+      "workspaceId": "965be0bb-77bc-44b6-a83a-6d21dba00608",
+      "employer": "HMRA/MHKA — Défense — Hôpital Militaire Reine Astrid",
+      "reference": "25GH410",
+      "title": "Achat ponctuel d'imprimantes d'étiquettes, incluant un kit de démarrage avec des étiquettes et des rubans pour différents services de la Composante Médicale de la Défense",
+      "description": "Fourniture ponctuelle d'imprimantes d'étiquettes avec kits de démarrage (étiquettes + rubans) pour les services de la Composante Médicale de la Défense belge. CPV : Imprimantes et traceurs.",
+      "budget": "N.D.",
+      "duration": "Ponctuel",
+      "location": "Belgique",
+      "sectorLabel": "🏛️ Défense / Fournitures",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [
+        "Défense",
+        "Hardware",
+        "Imprimantes",
+        "Fournitures"
+      ],
+      "skills": [
+        {
+          "t": "Fournitures / Hardware",
+          "hard": true
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-12"
+    },
+    {
+      "id": "03ede01c-70f8-49c4-b57c-803ae5eba23d",
+      "workspaceId": "03ede01c-70f8-49c4-b57c-803ae5eba23d",
+      "employer": "Vlaamse Maatschappij voor Sociaal Wonen",
+      "reference": "91AC0034",
+      "title": "Archeologische opgraving t.h.v. HOOGSTRAAT-STEDEBEEKPAD (LOT 3)",
+      "description": "Opdracht voor archeologische opgravingsdiensten op een bouwlocatie (Lot 3 — HOOGSTRAAT-STEDEBEEKPAD). CPV : Services archéologiques.",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Vlaanderen",
+      "sectorLabel": "🏛️ Patrimoine / Archéologie",
+      "sectorBg": "#F0FDF4",
+      "sectorColor": "#166534",
+      "tags": [
+        "Archéologie",
+        "Patrimoine",
+        "Construction",
+        "Flandre"
+      ],
+      "skills": [
+        {
+          "t": "Archéologie / Patrimoine",
+          "hard": true
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-12"
+    },
+    {
+      "id": "3802cee0-149d-46c8-9213-c042d9ed1602",
+      "workspaceId": "3802cee0-149d-46c8-9213-c042d9ed1602",
+      "employer": "Departement Welzijn, Volksgezondheid en Gezin",
+      "reference": "DZ/2026/PGB/004",
+      "title": "Actualisatie et versterking van de sensibiliseringscampagne 'Warme Dagen'",
+      "description": "Évaluation, actualisation et renforcement de la campagne de sensibilisation 'Warme Dagen, Zorg Dragen' (chaleur et santé). Trois volets : développement d'indicateurs de monitoring, évaluation des matériaux/besoins, revue littérature scientifique et messages ciblés.",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Flandre / Belgique",
+      "sectorLabel": "🏥 Santé publique / Communication",
+      "sectorBg": "#FEE2E2",
+      "sectorColor": "#991B1B",
+      "tags": [
+        "Santé",
+        "Communication",
+        "Campagne",
+        "Monitoring",
+        "Recherche"
+      ],
+      "skills": [
+        {
+          "t": "Communication santé / Recherche",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-03",
+      "emailDate": "2026-06-12"
+    },
+    {
+      "id": "b261d658-7a7c-4e3c-85c9-906515f8c1f6",
+      "workspaceId": "b261d658-7a7c-4e3c-85c9-906515f8c1f6",
+      "employer": "Departement Welzijn, Volksgezondheid en Gezin",
+      "reference": "DZ/2026/MGZ/002",
+      "title": "Voorstudie pour un onderzoeksplan voor een epidemiologisch onderzoek PFAS",
+      "description": "Voorstudie pour un plan de recherche épidémiologique longitudinale sur les PFAS autour du site 3M à Zwijndrecht. Évaluation de la faisabilité, des ressources nécessaires et du soutien local. CPV : Services de santé et services sociaux.",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Zwijndrecht / Flandre",
+      "sectorLabel": "🏥 Santé / Recherche épidémiologique",
+      "sectorBg": "#FEE2E2",
+      "sectorColor": "#991B1B",
+      "tags": [
+        "PFAS",
+        "Santé",
+        "Recherche",
+        "Épidémiologie",
+        "Environnement"
+      ],
+      "skills": [
+        {
+          "t": "Épidémiologie / Santé publique",
+          "hard": true
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-27",
+      "emailDate": "2026-06-12"
+    },
+    {
+      "id": "30c99d8c-3415-4117-938d-e48e319d4e12",
+      "workspaceId": "30c99d8c-3415-4117-938d-e48e319d4e12",
+      "employer": "Departement Onderwijs en Vorming",
+      "reference": "TIO/2026/03",
+      "title": "Auditopdracht NVAO — ⚠️ Déjà attribué",
+      "description": "⚠️ Avis de résultat de marché — Mission d'audit pour l'NVAO (accréditation de l'enseignement supérieur flamand). Contrat déjà attribué. CPV : Services d'audit.",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Flandre",
+      "sectorLabel": "📋 Audit / Enseignement",
+      "sectorBg": "#EDE9FE",
+      "sectorColor": "#6D28D9",
+      "tags": [
+        "Audit",
+        "Enseignement",
+        "NVAO",
+        "⚠️ Attribué"
+      ],
+      "skills": [
+        {
+          "t": "Audit / Accréditation",
+          "hard": true
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-12"
+    },
+    {
+      "id": "0379a3da-622f-4426-8b07-b8171718ccc6",
+      "workspaceId": "0379a3da-622f-4426-8b07-b8171718ccc6",
+      "employer": "Direction Générale Navigation — SPF Mobilité et Transports",
+      "reference": "MA25052600107",
+      "title": "RFI — Mise en oeuvre, intégration et assistance pour un système de guichet unique maritime national belge (EMSWe)",
+      "description": "Consultation du marché (RFI) pour l'implémentation du National Maritime Single Window belge conformément au règlement UE 2019/1239 (EMSWe). Approche technique, organisationnelle et opérationnelle, intégration avec les systèmes existants, points de données et sécurité, risques. Pas encore un appel d'offres — phase exploratoire.",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Belgique",
+      "sectorLabel": "💻 IT / Maritime",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "EMSWe",
+        "Guichet unique",
+        "Maritime",
+        "Intégration SI",
+        "Sécurité",
+        "RFI"
+      ],
+      "skills": [
+        {
+          "t": "Intégration SI",
+          "hard": true
+        },
+        {
+          "t": "Architecture système",
+          "hard": true
+        },
+        {
+          "t": "Gestion de projet IT",
+          "hard": false
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": "2026-06-29",
+      "emailDate": "2026-06-12"
+    },
+    {
+      "id": "4b9a20eb-ad09-49d1-9e2f-d63ba1e15129",
+      "workspaceId": "4b9a20eb-ad09-49d1-9e2f-d63ba1e15129",
+      "employer": "Parlement Wallon",
+      "reference": "PW-KG/26-014",
+      "title": "Désignation d'un prestataire de services assurant une procédure de reclassement professionnel",
+      "description": "Désignation d'un prestataire pour des procédures d'outplacement (régime général et particulier) au bénéfice des collaborateurs des groupes politiques et des députés-employeurs du Parlement Wallon.",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "Namur / Wallonie",
+      "sectorLabel": "👥 RH / Outplacement",
+      "sectorBg": "#F0FDF4",
+      "sectorColor": "#166534",
+      "tags": [
+        "Outplacement",
+        "RH",
+        "Parlement",
+        "Wallonie"
+      ],
+      "skills": [
+        {
+          "t": "Reclassement professionnel / Outplacement",
+          "hard": true
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-15",
+      "emailDate": "2026-06-12"
+    },
+    {
+      "id": "543c02e8-f8e4-4d26-be7c-6567be5ea957",
+      "workspaceId": "543c02e8-f8e4-4d26-be7c-6567be5ea957",
+      "employer": "MRMP-S/S — Défense (Direction Générale Material Resources)",
+      "reference": "25SS170",
+      "title": "Marché pluriannuel (48 mois) — Media monitoring et analyse au profit de la Défense",
+      "description": "Contrat pluriannuel de 48 mois à bordereau de prix pour des services de media monitoring et d'analyse au profit de la Défense belge. Surveillance des médias et analyse de presse. Base légale : loi 17 juin 2016 (secteurs classiques).",
+      "budget": "N.D.",
+      "duration": "48 mois",
+      "location": "Belgique",
+      "sectorLabel": "🛡️ Défense / Communication",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [
+        "Défense",
+        "Media monitoring",
+        "Analyse",
+        "Communication",
+        "48 mois"
+      ],
+      "skills": [
+        {
+          "t": "Media monitoring / Analyse presse",
+          "hard": true
+        },
+        {
+          "t": "Reporting / Analyse",
+          "hard": false
+        }
+      ],
+      "score": 39,
+      "verdict": "maybe",
+      "deadline": "2026-07-13",
+      "emailDate": "2026-06-12"
+    },
     {
       "id": "68ba25c6-604d-4dd9-833b-c05842fef206",
       "workspaceId": "68ba25c6-604d-4dd9-833b-c05842fef206",
