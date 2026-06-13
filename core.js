@@ -294,7 +294,7 @@
       + '</td>'
       + '<td><div class="members-grid">' + membersHtml + '</div></td>'
       + '<td><div class="verdict-badge ' + vCls + '">' + vLabel + '</div>'
-      + (offer.workspaceId ? '<a class="see-dossier" href="' + wsUrl + '" target="_blank" rel="noopener noreferrer">Voir le dossier →</a><button class="btn-one-pager" onclick="generateOnePagerPDF(' + '\'' + offer.id + '\'' + ',event)" ' + (offer.description && offer.description.length > 20 ? '' : 'disabled') + ' title="' + (offer.description && offer.description.length > 20 ? 'Télécharger le résumé' : 'Description insuffisante') + '">📄 One-pager</button>' : '')
+      + (offer.workspaceId ? '<a class="see-dossier" href="' + wsUrl + '" target="_blank" rel="noopener noreferrer">Voir le dossier →</a><button class="btn-one-pager" data-offer-id="' + offer.id + '" ' + (offer.description && offer.description.length > 20 ? '' : 'disabled') + ' title="' + (offer.description && offer.description.length > 20 ? 'Télécharger le résumé' : 'Description insuffisante') + '">📄 One-pager</button>' : '')
       + '</td></tr>';
   }
 

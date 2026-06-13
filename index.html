@@ -134,9 +134,9 @@
     .verdict-badge.go{background:var(--go-bg);color:var(--go)}
     .verdict-badge.maybe{background:var(--maybe-bg);color:#92400e}
     .verdict-badge.no{background:var(--no-bg);color:var(--no)}
-    .see-dossier{display:inline-flex;align-items:center;gap:4px;color:var(--accent2);font-size:12px;text-decoration:none;border:1px solid var(--accent2);border-radius:5px;padding:4px 10px;transition:all .15s}
+    .see-dossier{display:block;width:fit-content;color:var(--accent2);font-size:12px;text-decoration:none;border:1px solid var(--accent2);border-radius:5px;padding:4px 10px;transition:all .15s;margin-bottom:6px}
     .see-dossier:hover{background:var(--accent2);color:#fff}
-    .btn-one-pager{display:inline-block;color:#fff;font-size:12px;background:var(--accent);border:1px solid var(--accent);border-radius:5px;padding:4px 10px;cursor:pointer;margin-left:4px;font-weight:500}
+    .btn-one-pager{display:block;width:fit-content;color:#fff;font-size:12px;background:var(--accent);border:1px solid var(--accent);border-radius:5px;padding:4px 10px;cursor:pointer;font-weight:500}
     .btn-one-pager:hover:not(:disabled){opacity:.9;background:rgba(249,115,22,.9)}
     .btn-one-pager:disabled{opacity:.45;cursor:not-allowed}
 
@@ -282,6 +282,14 @@ function renderOffers(){
   try{
     if(filtered.length === 0){ tbody.innerHTML=''; empty.classList.add('visible'); }
     else { empty.classList.remove('visible'); tbody.innerHTML = filtered.map(o=>EPROC.renderOfferRow(o, ctx)).join(''); }
+    // Attach click handlers to one-pager buttons
+    document.querySelectorAll('.btn-one-pager').forEach(btn => {
+      btn.onclick = (e) => {
+        e.preventDefault();
+        const offerId = btn.getAttribute('data-offer-id');
+        generateOnePagerPDF(offerId, e);
+      };
+    });
   }catch(e){
     showError('Erreur de rendu : ' + e.message);
     return;
