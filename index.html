@@ -478,5 +478,27 @@ function runBrowserTests(){
   return {passed, total};
 }
 </script>
+
+<div style="position:fixed;bottom:0;right:0;padding:15px;background:#1e1e1e;color:#00ff00;font-family:monospace;font-size:11px;max-width:300px;border:1px solid #00ff00;z-index:9999">
+  <div id="debug-status">Loading...</div>
+</div>
+<script>
+window.DEBUG_STATUS = function(msg) {
+  const el = document.getElementById('debug-status');
+  if (el) el.innerHTML = msg + '<br>' + (el.innerHTML || '');
+};
+window.DEBUG_STATUS('✓ Debug init');
+window.addEventListener('load', () => {
+  window.DEBUG_STATUS('✓ Page loaded');
+  setTimeout(() => {
+    window.DEBUG_STATUS((typeof EPROC !== 'undefined' ? '✓' : '✗') + ' EPROC: ' + typeof EPROC);
+    window.DEBUG_STATUS((typeof DATA !== 'undefined' ? '✓' : '✗') + ' DATA: ' + (DATA ? DATA.offers.length + ' offers' : 'undefined'));
+    window.DEBUG_STATUS((OFFERS ? '✓' : '✗') + ' OFFERS: ' + (OFFERS ? OFFERS.length : 'undefined'));
+  }, 500);
+});
+window.addEventListener('error', (e) => {
+  window.DEBUG_STATUS('✗ Error: ' + e.message);
+});
+</script>
 </body>
 </html>
