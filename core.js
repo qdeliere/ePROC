@@ -305,3 +305,113 @@
     renderDeadlineCell, renderMemberCard, renderOfferRow,
   };
 });
+
+  // ── Document Cache & Analysis (v0.6.1) ──
+  const DocCache = {
+    init: function() {
+      this.db = null;
+      return new Promise((resolve) => {
+        if (!window.indexedDB) {
+          console.log('IndexedDB not available, using localStorage');
+          resolve(false);
+          return;
+        }
+        const req = window.indexedDB.open('EPROC_Cache', 1);
+        req.onerror = () => { console.warn('IndexedDB init failed'); resolve(false); };
+        req.onsuccess = (e) => { this.db = e.target.result; resolve(true); };
+        req.onupgradeneeded = (e) => {
+          const db = e.target.result;
+          if (!db.objectStoreNames.contains('documents')) {
+            db.createObjectStore('documents', { keyPath: 'id' });
+          }
+        };
+      });
+    },
+    set: async function(offerId, docId, content, metadata) {
+      const id = offerId + '::' + docId;
+      const doc = { id, offerId, docId, content, metadata, cached: new Date().toISOString() };
+      
+      if (this.db) {
+        return new Promise((resolve, reject) => {
+          const tx = this.db.transaction('documents', 'readwrite');
+          const req = tx.objectStore('documents').put(doc);
+          req.onsuccess = () => resolve(true);
+          req.onerror = () => reject(req.error);
+        });
+      } else {
+        localStorage.setItem('eproc_doc_' + id, JSON.stringify(doc));
+        return true;
+      }
+    },
+    get: async function(offerId, docId) {
+      const id = offerId + '::' + docId;
+      if (this.db) {
+        return new Promise((resolve) => {
+          const tx = this.db.transaction('documents', 'readonly');
+          const req = tx.objectStore('documents').get(id);
+          req.onsuccess = () => resolve(req.result);
+          req.onerror = () => resolve(null);
+        });
+      } else {
+        const cached = localStorage.getItem('eproc_doc_' + id);
+        return cached ? JSON.parse(cached) : null;
+      }
+    },
+    list: async function(offerId) {
+      if (this.db) {
+        return new Promise((resolve) => {
+          const tx = this.db.transaction('documents', 'readonly');
+          const req = tx.objectStore('documents').getAll();
+          req.onsuccess = () => {
+            const docs = req.result.filter(d => d.offerId === offerId);
+            resolve(docs);
+          };
+          req.onerror = () => resolve([]);
+        });
+      } else {
+        const docs = [];
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key.startsWith('eproc_doc_' + offerId)) {
+            docs.push(JSON.parse(localStorage.getItem(key)));
+          }
+        }
+        return docs;
+      }
+    }
+  };
+
+  async function fetchDossierDocuments(workspaceId, offerId, onProgress) {
+    onProgress = onProgress || (() => {});
+    onProgress({ status: 'Downloading tender documents...', percent: 10 });
+    
+    // Check cache first
+    const cached = await DocCache.list(offerId);
+    if (cached.length > 0) {
+      console.log('Using cached documents for', offerId);
+      onProgress({ status: 'Using cached documents', percent: 100 });
+      return cached;
+    }
+    
+    onProgress({ status: 'Fetching dossier from publicprocurement.be...', percent: 20 });
+    
+    // For now, return empty (implementation pending proper CORS solution)
+    // In production, would fetch via API or Claude in Chrome
+    return [];
+  }
+
+  async function analyzeDossier(offerId) {
+    const cached = await DocCache.list(offerId);
+    return {
+      source: 'documents',
+      documentCount: cached.length,
+      documents: cached.map(d => ({ name: d.docId, cached: d.cached }))
+    };
+  }
+
+  return {
+    normStr, esc, daysLeft, fmtDl, fmtDate, debounce, proxify,
+    SKILL_RULES, scoreOffer, extractSkills, getMatchedMembers, sortOffers, filterOffers,
+    DocCache, fetchDossierDocuments, analyzeDossier
+  };
+});
