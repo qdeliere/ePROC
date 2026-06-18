@@ -1,10 +1,10 @@
 {
   "meta": {
-    "siteVersion": "0.6.0",
+    "siteVersion": "1.0.0",
     "artifactVersion": "0.5.9",
-    "lastSync": "2026-06-13T07:02:47.762811Z",
-    "generatedAt": "2026-06-13T07:02:47.762811Z",
-    "source": "Sync Cowork 13/06/2026 — 1 email ePROC (12/06) → 8 nouvelles offres + CVs SharePoint (aucun delta)"
+    "lastSync": "2026-06-18T14:48:11.351Z",
+    "generatedAt": "2026-06-18T14:48:11.351Z",
+    "source": "Sync Cowork 18/06/2026 — 29 nouveaux emails ePROC"
   },
   "matrice": {
     "poles": [
@@ -601,6 +601,1629 @@
     }
   ],
   "offers": [
+    {
+      "id": "1d59c0e5-2e6f-423a-8523-8ae5d7d787e6",
+      "workspaceId": "1d59c0e5-2e6f-423a-8523-8ae5d7d787e6",
+      "employer": "SNCB-Procurement",
+      "reference": "WS3103670427",
+      "title": "Escrow agreement",
+      "description": "Offre référencée WS3103670427 - SNCB-Procurement",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "SNCB-Procurement",
+        "Escrow agreement"
+      ],
+      "skills": [
+        {
+          "t": "Escrow agreement",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-18"
+    },
+    {
+      "id": "4f43c2b7-c109-4b26-a59f-8fe0ed15e928",
+      "workspaceId": "4f43c2b7-c109-4b26-a59f-8fe0ed15e928",
+      "employer": "Departement Mobiliteit en Openbare Werken - Afdeling Maritieme Toegang",
+      "reference": "DMOW/MT/03061",
+      "title": "Opmaak grondwatermodel voor de Vandammesluis",
+      "description": "Offre référencée DMOW/MT/03061 - Departement Mobiliteit en Openbare Werken - Afdeling Maritieme Toegang",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Departement",
+        "Opmaak grondwatermodel"
+      ],
+      "skills": [
+        {
+          "t": "Opmaak grondwatermodel voor",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-18"
+    },
+    {
+      "id": "69af162a-0aa0-4b59-bf1f-99599be751be",
+      "workspaceId": "69af162a-0aa0-4b59-bf1f-99599be751be",
+      "employer": "Vlaamse Landmaatschappij",
+      "reference": "PPP08P-2050/6076/ANT/2026/LIR00017_003",
+      "title": "Hydrologische studie Lachenebeek (Kontich-Hove-Boechout-Lint)",
+      "description": "Offre référencée PPP08P-2050/6076/ANT/2026/LIR00017_003 - Vlaamse Landmaatschappij",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Vlaamse",
+        "Hydrologische studie"
+      ],
+      "skills": [
+        {
+          "t": "Hydrologische studie Lachenebeek",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-18"
+    },
+    {
+      "id": "70760651-68a2-4ac4-a548-48c4b21f6c55",
+      "workspaceId": "70760651-68a2-4ac4-a548-48c4b21f6c55",
+      "employer": "skeyes",
+      "reference": "OA 2949",
+      "title": "La conclusion d'un contract pour la mise à disposition d'un consultant Senior Training, en appui du service Urbanisme",
+      "description": "Offre référencée OA 2949 - skeyes",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / IT",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "skeyes",
+        "La conclusion"
+      ],
+      "skills": [
+        {
+          "t": "La conclusion d'un",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-18"
+    },
+    {
+      "id": "15bf7573-d2b9-44ff-abcb-c91261f6b14a",
+      "workspaceId": "15bf7573-d2b9-44ff-abcb-c91261f6b14a",
+      "employer": "Ministry of the German-speaking Community of Belgium",
+      "reference": "FbIT.MaF/03.03-00.04.01/25.180bis",
+      "title": "Vergabe eines öffentlichen Dienstleistungsauftrags für SAP HCM",
+      "description": "Offre référencée FbIT.MaF/03.03-00.04.01/25.180bis - Ministry of the German-speaking Community of Belgium",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Ministry",
+        "Vergabe eines"
+      ],
+      "skills": [
+        {
+          "t": "Vergabe eines öffentlichen",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-18"
+    },
+    {
+      "id": "02f4e9b5-8e21-4f8b-8977-a26d248deef2",
+      "workspaceId": "02f4e9b5-8e21-4f8b-8977-a26d248deef2",
+      "employer": "Agence du Numérique",
+      "reference": "AdN 2026 -100",
+      "title": "Procédure concurrentielle avec négociation pour une équipe opérationnelle cyber-incidents 24H/7",
+      "description": "Offre référencée AdN 2026 -100 - Agence du Numérique",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Sécurité",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Agence",
+        "Procédure concurrentielle"
+      ],
+      "skills": [
+        {
+          "t": "Procédure concurrentielle avec",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-17",
+      "emailDate": "2026-06-18"
+    },
+    {
+      "id": "9760db9a-1e51-4baa-b8da-8bb10ff5df7a",
+      "workspaceId": "9760db9a-1e51-4baa-b8da-8bb10ff5df7a",
+      "employer": "Agentschap voor Innoveren en Ondernemen",
+      "reference": "VLAIO-2026-03",
+      "title": "Raamovereenkomst advies optimalisering ruimtegebruik verticale productieprocessen",
+      "description": "Offre référencée VLAIO-2026-03 - Agentschap voor Innoveren en Ondernemen",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Agentschap",
+        "Raamovereenkomst advies"
+      ],
+      "skills": [
+        {
+          "t": "Raamovereenkomst advies optimalisering",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-18"
+    },
+    {
+      "id": "3025cd24-f3f8-4de1-a5c7-5df9bd4f7229",
+      "workspaceId": "3025cd24-f3f8-4de1-a5c7-5df9bd4f7229",
+      "employer": "Vlaams Parlement",
+      "reference": "I030_004",
+      "title": "Raamovereenkomst voor het inzetten van IT-profielen",
+      "description": "Offre référencée I030_004 - Vlaams Parlement",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / IT",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [
+        "Vlaams",
+        "Raamovereenkomst voor"
+      ],
+      "skills": [
+        {
+          "t": "Raamovereenkomst voor het",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-20",
+      "emailDate": "2026-06-18"
+    },
+    {
+      "id": "2da2ed4d-bca2-41ac-925b-f3e7a3cf5bdf",
+      "workspaceId": "2da2ed4d-bca2-41ac-925b-f3e7a3cf5bdf",
+      "employer": "Ondersteunend Centrum van het Agentschap voor Natuur en Bos",
+      "reference": "2026 03",
+      "title": "Opdracht voor de herbouw van een bestaande examineringapplicatie",
+      "description": "Offre référencée 2026 03 - Ondersteunend Centrum van het Agentschap voor Natuur en Bos",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Ondersteunend",
+        "Opdracht voor"
+      ],
+      "skills": [
+        {
+          "t": "Opdracht voor de",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-07",
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "26c0ee93-1b2a-40d4-b35d-4f0dcbbf5c06",
+      "workspaceId": "26c0ee93-1b2a-40d4-b35d-4f0dcbbf5c06",
+      "employer": "MRMP-L/S - Defence Material Resources",
+      "reference": "26LS223",
+      "title": "Sim Shotgun C-UAS",
+      "description": "Offre référencée 26LS223 - MRMP-L/S - Defence Material Resources",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "MRMP-L/S",
+        "Sim Shotgun"
+      ],
+      "skills": [
+        {
+          "t": "Sim Shotgun C-UAS",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-15",
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "568a3cc3-b713-4bde-bb5f-3fd3452b4306",
+      "workspaceId": "568a3cc3-b713-4bde-bb5f-3fd3452b4306",
+      "employer": "Öffentlicher Wohnungsbau Ostbelgien",
+      "reference": "ID2618",
+      "title": "Réalisation de certificats PEB",
+      "description": "Offre référencée ID2618 - Öffentlicher Wohnungsbau Ostbelgien",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Öffentlicher",
+        "Réalisation de"
+      ],
+      "skills": [
+        {
+          "t": "Réalisation de certificats",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-06",
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "222774b1-cd59-4979-abaf-2602f564a3d2",
+      "workspaceId": "222774b1-cd59-4979-abaf-2602f564a3d2",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000821375",
+      "title": "Complément projet Implémentation outil surveillance végétation Phase 6",
+      "description": "Offre référencée 0000821375 - Infrabel - Goods & Services",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Infrabel",
+        "Complément projet"
+      ],
+      "skills": [
+        {
+          "t": "Complément projet Implémentation",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "ac56cc6c-516a-4b0c-9a38-151edc418e35",
+      "workspaceId": "ac56cc6c-516a-4b0c-9a38-151edc418e35",
+      "employer": "Vlaamse Milieumaatschappij",
+      "reference": "VMM/LUCHT/Luchtbeleid/2026/Integratie remote sensing in handhaving",
+      "title": "Wetenschappelijke ondersteuning emissiemonitoring remote sensing",
+      "description": "Offre référencée VMM/LUCHT/Luchtbeleid/2026/Integratie remote sensing in handhaving - Vlaamse Milieumaatschappij",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Vlaamse",
+        "Wetenschappelijke ondersteuning"
+      ],
+      "skills": [
+        {
+          "t": "Wetenschappelijke ondersteuning emissiemonitoring",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-06",
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "e10350d3-bab6-478c-8bca-e419f819d0cf",
+      "workspaceId": "e10350d3-bab6-478c-8bca-e419f819d0cf",
+      "employer": "Agentschap voor Innoveren en Ondernemen",
+      "reference": "PIO_2024.0024",
+      "title": "Marktconsultatie Clean Shift emissie-inzicht binnenvaart",
+      "description": "Offre référencée PIO_2024.0024 - Agentschap voor Innoveren en Ondernemen",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Agentschap",
+        "Marktconsultatie Clean"
+      ],
+      "skills": [
+        {
+          "t": "Marktconsultatie Clean Shift",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "a624117b-01f6-42d0-980e-1e759deb06aa",
+      "workspaceId": "a624117b-01f6-42d0-980e-1e759deb06aa",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000807079-LMU_Q",
+      "title": "Emarket 864 - Senior Java Developer",
+      "description": "Offre référencée 0000807079-LMU_Q - Infrabel - Goods & Services",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / IT",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Infrabel",
+        "Emarket 864"
+      ],
+      "skills": [
+        {
+          "t": "Emarket 864 -",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "729c5bdb-a580-465c-be90-ff175327f371",
+      "workspaceId": "729c5bdb-a580-465c-be90-ff175327f371",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000809188-LMU_Q",
+      "title": "eMarket 879 - Senior Functional Analyst",
+      "description": "Offre référencée 0000809188-LMU_Q - Infrabel - Goods & Services",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / IT",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Infrabel",
+        "eMarket 879"
+      ],
+      "skills": [
+        {
+          "t": "eMarket 879 -",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "81c2be7b-ab6a-4909-a714-6f0184c20ee6",
+      "workspaceId": "81c2be7b-ab6a-4909-a714-6f0184c20ee6",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000809187-LMU_Q",
+      "title": "Emarket 878 - Testeur GIS",
+      "description": "Offre référencée 0000809187-LMU_Q - Infrabel - Goods & Services",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Infrabel",
+        "Emarket 878"
+      ],
+      "skills": [
+        {
+          "t": "Emarket 878 -",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "eba591dc-6684-4f59-9037-080214c9027c",
+      "workspaceId": "eba591dc-6684-4f59-9037-080214c9027c",
+      "employer": "Institut Bruxellois pour la Gestion de l'Environnement",
+      "reference": "PPP0UM-13491/6199/2025G0040",
+      "title": "Openplus Brussel",
+      "description": "Offre référencée PPP0UM-13491/6199/2025G0040 - Institut Bruxellois pour la Gestion de l'Environnement",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Institut",
+        "Openplus Brussel"
+      ],
+      "skills": [
+        {
+          "t": "Openplus Brussel",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-06-26",
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "ff2f99df-500e-45ee-900f-a12f0bb523e5",
+      "workspaceId": "ff2f99df-500e-45ee-900f-a12f0bb523e5",
+      "employer": "De Werkvennootschap NV van publiek recht",
+      "reference": "DWV-A8H-JUR-02",
+      "title": "Appointment of a legal advisor",
+      "description": "Offre référencée DWV-A8H-JUR-02 - De Werkvennootschap NV van publiek recht",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "De",
+        "Appointment of"
+      ],
+      "skills": [
+        {
+          "t": "Appointment of a",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-12",
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "51254508-8347-4fd4-b610-be96040503f2",
+      "workspaceId": "51254508-8347-4fd4-b610-be96040503f2",
+      "employer": "Digitaal Vlaanderen",
+      "reference": "DiVl-HR/ 2025/OPZB/1105",
+      "title": "Raamovereenkomst diensten leiderschapsontwikkeling",
+      "description": "Offre référencée DiVl-HR/ 2025/OPZB/1105 - Digitaal Vlaanderen",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Digitaal",
+        "Raamovereenkomst diensten"
+      ],
+      "skills": [
+        {
+          "t": "Raamovereenkomst diensten leiderschapsontwikkeling",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "93636b55-6fe2-42c0-8075-b857ba6cb8c9",
+      "workspaceId": "93636b55-6fe2-42c0-8075-b857ba6cb8c9",
+      "employer": "Direction Asset Management",
+      "reference": "MI-O8.00.02-26-1797",
+      "title": "Détermination modalités mise en œuvre système gestion PMS",
+      "description": "Offre référencée MI-O8.00.02-26-1797 - Direction Asset Management",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Direction",
+        "Détermination modalités"
+      ],
+      "skills": [
+        {
+          "t": "Détermination modalités mise",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-13",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "6ddb559a-a749-4016-b6fb-24901f4a4cc7",
+      "workspaceId": "6ddb559a-a749-4016-b6fb-24901f4a4cc7",
+      "employer": "skeyes",
+      "reference": "OA 2953",
+      "title": "Étude optimisation automatisation processus urbanisme URBA",
+      "description": "Offre référencée OA 2953 - skeyes",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "skeyes",
+        "Étude optimisation"
+      ],
+      "skills": [
+        {
+          "t": "Étude optimisation automatisation",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "c64974ee-c113-44df-93ce-5c07ad9a4539",
+      "workspaceId": "c64974ee-c113-44df-93ce-5c07ad9a4539",
+      "employer": "Agence Wallonne pour la Promotion d'une Agriculture de Qualité",
+      "reference": "2026/08",
+      "title": "Marché services études marché comportements achats test campagne promotion",
+      "description": "Offre référencée 2026/08 - Agence Wallonne pour la Promotion d'une Agriculture de Qualité",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Agence",
+        "Marché services"
+      ],
+      "skills": [
+        {
+          "t": "Marché services études",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "296d923b-0880-43b5-b4b5-155b7bf28b44",
+      "workspaceId": "296d923b-0880-43b5-b4b5-155b7bf28b44",
+      "employer": "SPF Sécurité sociale - DG Expertise juridique",
+      "reference": "2026-JUR-REVISEUR CAAMI HZIV",
+      "title": "mission de réviseur d'entreprises auprès de la CAAMI",
+      "description": "Offre référencée 2026-JUR-REVISEUR CAAMI HZIV - SPF Sécurité sociale - DG Expertise juridique",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "SPF",
+        "mission de"
+      ],
+      "skills": [
+        {
+          "t": "mission de réviseur",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-27",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "d7ed9780-e66a-4256-a3cb-ee39ade04039",
+      "workspaceId": "d7ed9780-e66a-4256-a3cb-ee39ade04039",
+      "employer": "Vlaamse Milieumaatschappij",
+      "reference": "VMM_PIWGGW_DDM_FR_2026_04",
+      "title": "Raamovereenkomst begeleiden Lokale Blue Deal coalities planningsfase",
+      "description": "Offre référencée VMM_PIWGGW_DDM_FR_2026_04 - Vlaamse Milieumaatschappij",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Vlaamse",
+        "Raamovereenkomst begeleiden"
+      ],
+      "skills": [
+        {
+          "t": "Raamovereenkomst begeleiden Lokale",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-06-29",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "5319a408-1178-4b3d-bc7f-05f28f4affcb",
+      "workspaceId": "5319a408-1178-4b3d-bc7f-05f28f4affcb",
+      "employer": "Agence Wallonne pour la Promotion d'une Agriculture de Qualité",
+      "reference": "2025/22",
+      "title": "Marché services création identité forte produits alimentaires",
+      "description": "Offre référencée 2025/22 - Agence Wallonne pour la Promotion d'une Agriculture de Qualité",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Agence",
+        "Marché services"
+      ],
+      "skills": [
+        {
+          "t": "Marché services création",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "b7679260-6544-41e3-adef-9b29eb3fb96c",
+      "workspaceId": "b7679260-6544-41e3-adef-9b29eb3fb96c",
+      "employer": "bpost",
+      "reference": "2023-1-035",
+      "title": "MICE - organisation réservation réunions événements services connexes",
+      "description": "Offre référencée 2023-1-035 - bpost",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "bpost",
+        "MICE -"
+      ],
+      "skills": [
+        {
+          "t": "MICE - organisation",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "1f5cd53d-d76e-42d9-9ff7-10c51bf7fca9",
+      "workspaceId": "1f5cd53d-d76e-42d9-9ff7-10c51bf7fca9",
+      "employer": "De Werkvennootschap NV van publiek recht",
+      "reference": "DWV-A8H-FIN-01",
+      "title": "Appointment of a financial advisor",
+      "description": "Offre référencée DWV-A8H-FIN-01 - De Werkvennootschap NV van publiek recht",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "De",
+        "Appointment of"
+      ],
+      "skills": [
+        {
+          "t": "Appointment of a",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-12",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "679cd052-72c1-4ecf-8d43-2c2b38ce3c05",
+      "workspaceId": "679cd052-72c1-4ecf-8d43-2c2b38ce3c05",
+      "employer": "VZW Vlaams Centrum voor Agro- en Visserijmarketing",
+      "reference": "VLAM/2026/05",
+      "title": "Framework agreement full-service communications agency",
+      "description": "Offre référencée VLAM/2026/05 - VZW Vlaams Centrum voor Agro- en Visserijmarketing",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Services",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "VZW",
+        "Framework agreement"
+      ],
+      "skills": [
+        {
+          "t": "Framework agreement full-service",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-29",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "1d59c0e5-2e6f-423a-8523-8ae5d7d787e6",
+      "workspaceId": "1d59c0e5-2e6f-423a-8523-8ae5d7d787e6",
+      "employer": "SNCB-Procurement",
+      "reference": "WS3103670427",
+      "title": "Escrow agreement",
+      "description": "Escrow agreement",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Ferroviaire"
+      ],
+      "skills": [
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "4f43c2b7-c109-4b26-a59f-8fe0ed15e928",
+      "workspaceId": "4f43c2b7-c109-4b26-a59f-8fe0ed15e928",
+      "employer": "Departement Mobiliteit en Openbare Werken - Afdeling Maritieme Toegang",
+      "reference": "DMOW/MT/03061",
+      "title": "Opmaak grondwatermodel voor de Vandammesluis",
+      "description": "Opmaak grondwatermodel voor de Vandammesluis",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Data & BI"
+      ],
+      "skills": [
+        {
+          "t": "Data & BI",
+          "hard": true
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "69af162a-0aa0-4b59-bf1f-99599be751be",
+      "workspaceId": "69af162a-0aa0-4b59-bf1f-99599be751be",
+      "employer": "Vlaamse Landmaatschappij",
+      "reference": "PPP08P-2050/6076/ANT/2026/LIR00017_003",
+      "title": "Hydrologische studie Lachenebeek (Kontich-Hove-Boechout-Lint)",
+      "description": "Hydrologische studie Lachenebeek (Kontich-Hove-Boechout-Lint)",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "70760651-68a2-4ac4-a548-48c4b21f6c55",
+      "workspaceId": "70760651-68a2-4ac4-a548-48c4b21f6c55",
+      "employer": "skeyes",
+      "reference": "OA 2949",
+      "title": "La conclusion d'un contract pour la mise à disposition d'un (1) consultant Senior Training, en appui du service \"Urbanisme\".",
+      "description": "La conclusion d'un contract pour la mise à disposition d'un (1) consultant Senior Training, en appui du service \"Urbanisme\".",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Ferroviaire",
+        "Formation"
+      ],
+      "skills": [
+        {
+          "t": "Formation",
+          "hard": false
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "15bf7573-d2b9-44ff-abcb-c91261f6b14a",
+      "workspaceId": "15bf7573-d2b9-44ff-abcb-c91261f6b14a",
+      "employer": "Ministry of the German-speaking Community of Belgium",
+      "reference": "FbIT.MaF/03.03-00.04.01/25.180bis",
+      "title": "Vergabe eines öffentlichen Dienstleistungsauftrags von umfangreichen Dienstleistungen für die Bereitstellung und Nutzung des Personalverwaltungs- und Lohnbuchhaltungssoftware SAP HCM durch die Deutschsprachige Gemeinschaft",
+      "description": "Vergabe eines öffentlichen Dienstleistungsauftrags von umfangreichen Dienstleistungen für die Bereitstellung und Nutzung des Personalverwaltungs- und Lohnbuchhaltungssoftware SAP HCM durch die Deutschsprachige Gemeinschaft",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "02f4e9b5-8e21-4f8b-8977-a26d248deef2",
+      "workspaceId": "02f4e9b5-8e21-4f8b-8977-a26d248deef2",
+      "employer": "Agence du Numérique",
+      "reference": "AdN 2026 -100",
+      "title": "Procédure concurrentielle avec négociation portant sur la mise à disposition d'une équipe opérationnelle pour intervenir sur site en réponse à des cyber-incidents 24H/7 sur le territoire wallon",
+      "description": "Procédure concurrentielle avec négociation portant sur la mise à disposition d'une équipe opérationnelle pour intervenir sur site en réponse à des cyber-incidents 24H/7 sur le territoire wallon",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏤 Wallonie / Public",
+      "sectorBg": "#FEE2E2",
+      "sectorColor": "#991B1B",
+      "tags": [
+        "Sécurité IT"
+      ],
+      "skills": [
+        {
+          "t": "Sécurité IT",
+          "hard": true
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-17",
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "9760db9a-1e51-4baa-b8da-8bb10ff5df7a",
+      "workspaceId": "9760db9a-1e51-4baa-b8da-8bb10ff5df7a",
+      "employer": "Agentschap voor Innoveren en Ondernemen",
+      "reference": "VLAIO-2026-03",
+      "title": "Opdracht voor de totstandkoming van een raamovereenkomst voor het geven van advies aan bedrijven over de optimalisering van hun ruimtegebruik en de mogelijkheid van verticale productieprocessen met het oog op een uitbreiding ter plekke",
+      "description": "Opdracht voor de totstandkoming van een raamovereenkomst voor het geven van advies aan bedrijven over de optimalisering van hun ruimtegebruik en de mogelijkheid van verticale productieprocessen met het oog op een uitbreiding ter plekke",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "3025cd24-f3f8-4de1-a5c7-5df9bd4f7229",
+      "workspaceId": "3025cd24-f3f8-4de1-a5c7-5df9bd4f7229",
+      "employer": "Vlaams Parlement",
+      "reference": "I030_004",
+      "title": "Raamovereenkomst voor het inzetten van IT-profielen voor het Vlaams Parlement en de aan het Vlaams Parlement verbonden instellingen",
+      "description": "Raamovereenkomst voor het inzetten van IT-profielen voor het Vlaams Parlement en de aan het Vlaams Parlement verbonden instellingen",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-20",
+      "emailDate": "2026-06-17"
+    },
+    {
+      "id": "2da2ed4d-bca2-41ac-925b-f3e7a3cf5bdf",
+      "workspaceId": "2da2ed4d-bca2-41ac-925b-f3e7a3cf5bdf",
+      "employer": "Ondersteunend Centrum van het Agentschap voor Natuur en Bos",
+      "reference": "2026 03",
+      "title": "Opdracht voor de herbouw van een bestaande examineringapplicatie",
+      "description": "Opdracht voor de herbouw van een bestaande examineringapplicatie",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-07",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "26c0ee93-1b2a-40d4-b35d-4f0dcbbf5c06",
+      "workspaceId": "26c0ee93-1b2a-40d4-b35d-4f0dcbbf5c06",
+      "employer": "MRMP-L/S - Direction Générale Material Resources",
+      "reference": "26LS223",
+      "title": "Sim Shotgun C-UAS",
+      "description": "Sim Shotgun C-UAS",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-15",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "568a3cc3-b713-4bde-bb5f-3fd3452b4306",
+      "workspaceId": "568a3cc3-b713-4bde-bb5f-3fd3452b4306",
+      "employer": "Öffentlicher Wohnungsbau Ostbelgien",
+      "reference": "ID2618",
+      "title": "Réalisation de certificats PEB",
+      "description": "Réalisation de certificats PEB",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-06",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "222774b1-cd59-4979-abaf-2602f564a3d2",
+      "workspaceId": "222774b1-cd59-4979-abaf-2602f564a3d2",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000821375",
+      "title": "Complément au projet \"Implémentation d'un outil de surveillance et de suivi de la végétation\" - Phase 6",
+      "description": "Complément au projet \"Implémentation d'un outil de surveillance et de suivi de la végétation\" - Phase 6",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Ferroviaire"
+      ],
+      "skills": [
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "ac56cc6c-516a-4b0c-9a38-151edc418e35",
+      "workspaceId": "ac56cc6c-516a-4b0c-9a38-151edc418e35",
+      "employer": "Vlaamse Milieumaatschappij",
+      "reference": "VMM/LUCHT/Luchtbeleid/2026/Integratie remote sensing in handhaving",
+      "title": "Wetenschappelijke ondersteuning voor de succesvolle integratie van emissiemonitoring in toezichts- en handhavings-mechanismen gericht op voertuigemissies en ondersteuning bij de organisatie van structurele remote sensing in Vlaanderen",
+      "description": "Wetenschappelijke ondersteuning voor de succesvolle integratie van emissiemonitoring in toezichts- en handhavings-mechanismen gericht op voertuigemissies en ondersteuning bij de organisatie van structurele remote sensing in Vlaanderen",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [
+        "Data & BI"
+      ],
+      "skills": [
+        {
+          "t": "Data & BI",
+          "hard": true
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-06",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "e10350d3-bab6-478c-8bca-e419f819d0cf",
+      "workspaceId": "e10350d3-bab6-478c-8bca-e419f819d0cf",
+      "employer": "Agentschap voor Innoveren en Ondernemen",
+      "reference": "PIO_2024.0024",
+      "title": "Marktconsultatie 'Clean Shift: ontwikkeling van een systeemgerichte aanpak voor emissie-inzicht en verduurzaming van de binnenvaart'",
+      "description": "Marktconsultatie 'Clean Shift: ontwikkeling van een systeemgerichte aanpak voor emissie-inzicht en verduurzaming van de binnenvaart'",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Data & BI"
+      ],
+      "skills": [
+        {
+          "t": "Data & BI",
+          "hard": true
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "a624117b-01f6-42d0-980e-1e759deb06aa",
+      "workspaceId": "a624117b-01f6-42d0-980e-1e759deb06aa",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000807079-LMU_Q",
+      "title": "Emarket 864 - Senior Java Developer",
+      "description": "Emarket 864 - Senior Java Developer",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Logiciel",
+        "Ferroviaire",
+        "Développement"
+      ],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        },
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "729c5bdb-a580-465c-be90-ff175327f371",
+      "workspaceId": "729c5bdb-a580-465c-be90-ff175327f371",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000809188-LMU_Q",
+      "title": "eMarket 879 - Senior Functional Analyst",
+      "description": "eMarket 879 - Senior Functional Analyst",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Ferroviaire"
+      ],
+      "skills": [
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "81c2be7b-ab6a-4909-a714-6f0184c20ee6",
+      "workspaceId": "81c2be7b-ab6a-4909-a714-6f0184c20ee6",
+      "employer": "Infrabel - Goods & Services",
+      "reference": "0000809187-LMU_Q",
+      "title": "Emarket 878 - Testeur GIS",
+      "description": "Emarket 878 - Testeur GIS",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🚆 Ferroviaire / Transport",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Ferroviaire"
+      ],
+      "skills": [
+        {
+          "t": "Secteur ferroviaire",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "eba591dc-6684-4f59-9037-080214c9027c",
+      "workspaceId": "eba591dc-6684-4f59-9037-080214c9027c",
+      "employer": "Institut Bruxellois pour la Gestion de l'Environnement",
+      "reference": "PPP0UM-13491/6199/2025G0040",
+      "title": "Openplus Brussel",
+      "description": "Openplus Brussel",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-06-26",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "ff2f99df-500e-45ee-900f-a12f0bb523e5",
+      "workspaceId": "ff2f99df-500e-45ee-900f-a12f0bb523e5",
+      "employer": "De Werkvennootschap NV van publiek recht",
+      "reference": "DWV-A8H-JUR-02",
+      "title": "Appointment of a legal advisor",
+      "description": "Appointment of a legal advisor",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-12",
+      "emailDate": "2026-06-16"
+    },
+    {
+      "id": "51254508-8347-4fd4-b610-be96040503f2",
+      "workspaceId": "51254508-8347-4fd4-b610-be96040503f2",
+      "employer": "Digitaal Vlaanderen",
+      "reference": "DiVl-HR/ 2025/OPZB/1105",
+      "title": "Raamovereenkomst voor diensten inzake ervaringsgerichte leiderschapsontwikkeling",
+      "description": "Raamovereenkomst voor diensten inzake ervaringsgerichte leiderschapsontwikkeling",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-15"
+    },
+    {
+      "id": "93636b55-6fe2-42c0-8075-b857ba6cb8c9",
+      "workspaceId": "93636b55-6fe2-42c0-8075-b857ba6cb8c9",
+      "employer": "Direction Asset Management",
+      "reference": "MI-O8.00.02-26-1797",
+      "title": "Détermination des modalités de mise en œuvre d'un système de gestion de type PMS",
+      "description": "Détermination des modalités de mise en œuvre d'un système de gestion de type PMS",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Architecture"
+      ],
+      "skills": [
+        {
+          "t": "Architecture système",
+          "hard": true
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-13",
+      "emailDate": "2026-06-15"
+    },
+    {
+      "id": "6ddb559a-a749-4016-b6fb-24901f4a4cc7",
+      "workspaceId": "6ddb559a-a749-4016-b6fb-24901f4a4cc7",
+      "employer": "skeyes",
+      "reference": "OA 2953",
+      "title": "skeyes a l'intention d'attribuer, par une procédure négociée sans publication préalable, un marché portant sur une étude relative à l'optimisation et à l'automatisation du processus d'urbanisme (URBA).",
+      "description": "skeyes a l'intention d'attribuer, par une procédure négociée sans publication préalable, un marché portant sur une étude relative à l'optimisation et à l'automatisation du processus d'urbanisme (URBA).",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-15"
+    },
+    {
+      "id": "c64974ee-c113-44df-93ce-5c07ad9a4539",
+      "workspaceId": "c64974ee-c113-44df-93ce-5c07ad9a4539",
+      "employer": "Agence Wallonne pour la Promotion d'une Agriculture de Qualité",
+      "reference": "2026/08",
+      "title": "Marché de services relatif à la réalisation d'études de marché sur les comportements d'achats et de pré/post-test de campagne de promotion menées par l'Apaq-W",
+      "description": "Marché de services relatif à la réalisation d'études de marché sur les comportements d'achats et de pré/post-test de campagne de promotion menées par l'Apaq-W",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏤 Wallonie / Public",
+      "sectorBg": "#FEE2E2",
+      "sectorColor": "#991B1B",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-15"
+    },
+    {
+      "id": "296d923b-0880-43b5-b4b5-155b7bf28b44",
+      "workspaceId": "296d923b-0880-43b5-b4b5-155b7bf28b44",
+      "employer": "SPF Sécurité sociale - DG Expertise juridique",
+      "reference": "2026-JUR-REVISEUR CAAMI HZIV",
+      "title": "mission de réviseur d'entreprises auprès de la Caisse auxiliaire d'assurance maladie-invalidité (CAAMI)",
+      "description": "mission de réviseur d'entreprises auprès de la Caisse auxiliaire d'assurance maladie-invalidité (CAAMI)",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Sécurité IT"
+      ],
+      "skills": [
+        {
+          "t": "Sécurité IT",
+          "hard": true
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-27",
+      "emailDate": "2026-06-15"
+    },
+    {
+      "id": "d7ed9780-e66a-4256-a3cb-ee39ade04039",
+      "workspaceId": "d7ed9780-e66a-4256-a3cb-ee39ade04039",
+      "employer": "Vlaamse Milieumaatschappij",
+      "reference": "VMM_PIWGGW_DDM_FR_2026_04",
+      "title": "Raamovereenkomst met meerdere deelnemers voor het begeleiden van Lokale Blue Deal coalities in de planningsfase",
+      "description": "Raamovereenkomst met meerdere deelnemers voor het begeleiden van Lokale Blue Deal coalities in de planningsfase",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-06-29",
+      "emailDate": "2026-06-15"
+    },
+    {
+      "id": "5319a408-1178-4b3d-bc7f-05f28f4affcb",
+      "workspaceId": "5319a408-1178-4b3d-bc7f-05f28f4affcb",
+      "employer": "Agence Wallonne pour la Promotion d'une Agriculture de Qualité",
+      "reference": "2025/22",
+      "title": "Marché de services relatif à la création d'une « identité forte », permettant d'identifier des produits alimentaires respectant des certains critères de qualité reconnus par un cahier des charges. Accompagnement stratégique et créatif de l'Apaq-W & développement de la notoriété et de l'activation de cette « identité forte ».",
+      "description": "Marché de services relatif à la création d'une « identité forte », permettant d'identifier des produits alimentaires respectant des certains critères de qualité reconnus par un cahier des charges. Accompagnement stratégique et créatif de l'Apaq-W & développement de la notoriété et de l'activation de cette « identité forte ».",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏤 Wallonie / Public",
+      "sectorBg": "#FEE2E2",
+      "sectorColor": "#991B1B",
+      "tags": [
+        "Logiciel",
+        "Développement"
+      ],
+      "skills": [
+        {
+          "t": "Développement logiciel",
+          "hard": true
+        }
+      ],
+      "score": 45,
+      "verdict": "maybe",
+      "deadline": null,
+      "emailDate": "2026-06-15"
+    },
+    {
+      "id": "b7679260-6544-41e3-adef-9b29eb3fb96c",
+      "workspaceId": "b7679260-6544-41e3-adef-9b29eb3fb96c",
+      "employer": "bpost",
+      "reference": "2023-1-035",
+      "title": "MICE - ORGANISATION ET RÉSERVATION DE RÉUNIONS D'ENTREPRISE, D'ÉVÉNEMENTS, D'ÉVÉNEMENTS HORS SITE, DE REPAS EN EXTÉRIEUR ET SERVICES CONNEXES et TAILSPEND - ACHATS DE VALEUR LIMITÉE",
+      "description": "MICE - ORGANISATION ET RÉSERVATION DE RÉUNIONS D'ENTREPRISE, D'ÉVÉNEMENTS, D'ÉVÉNEMENTS HORS SITE, DE REPAS EN EXTÉRIEUR ET SERVICES CONNEXES et TAILSPEND - ACHATS DE VALEUR LIMITÉE",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": null,
+      "emailDate": "2026-06-15"
+    },
+    {
+      "id": "1f5cd53d-d76e-42d9-9ff7-10c51bf7fca9",
+      "workspaceId": "1f5cd53d-d76e-42d9-9ff7-10c51bf7fca9",
+      "employer": "De Werkvennootschap NV van publiek recht",
+      "reference": "DWV-A8H-FIN-01",
+      "title": "Appointment of a financial advisor",
+      "description": "Appointment of a financial advisor",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🏛️ Fédéral / Public",
+      "sectorBg": "#DBEAFE",
+      "sectorColor": "#1D4ED8",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-08-12",
+      "emailDate": "2026-06-15"
+    },
+    {
+      "id": "679cd052-72c1-4ecf-8d43-2c2b38ce3c05",
+      "workspaceId": "679cd052-72c1-4ecf-8d43-2c2b38ce3c05",
+      "employer": "VZW Vlaams Centrum voor Agro- en Visserijmarketing",
+      "reference": "VLAM/2026/05",
+      "title": "Framework agreement full-service communications agency",
+      "description": "Framework agreement full-service communications agency",
+      "budget": "N.D.",
+      "duration": "N.D.",
+      "location": "N.D.",
+      "sectorLabel": "🦁 Flandre / Public",
+      "sectorBg": "#FEF3C7",
+      "sectorColor": "#92400E",
+      "tags": [
+        "Consulting",
+        "Services"
+      ],
+      "skills": [
+        {
+          "t": "Services généraux",
+          "hard": false
+        }
+      ],
+      "score": 35,
+      "verdict": "no",
+      "deadline": "2026-07-29",
+      "emailDate": "2026-06-15"
+    },
     {
       "id": "965be0bb-77bc-44b6-a83a-6d21dba00608",
       "workspaceId": "965be0bb-77bc-44b6-a83a-6d21dba00608",
