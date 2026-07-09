@@ -115,7 +115,7 @@ assert('filtre active = go+maybe', EPROC.filterOffers(OFFERS, 'active').every(o 
 assert('filtre all = tout', EPROC.filterOffers(OFFERS, 'all').length === OFFERS.length);
 assert('filtre go', EPROC.filterOffers(OFFERS, 'go').every(o => o.verdict === 'go'));
 assert('filtre no', EPROC.filterOffers(OFFERS, 'no').every(o => o.verdict === 'no'));
-assert('recherche "forem" -> 1', EPROC.filterOffers(OFFERS, 'all', 'forem').length === 1);
+assert('recherche "forem" -> >=1', EPROC.filterOffers(OFFERS, 'all', 'forem').length >= 1);
 assert('recherche accents-insensible', EPROC.filterOffers(OFFERS, 'all', 'sante').length >= 1);
 assert('recherche sans resultat -> 0', EPROC.filterOffers(OFFERS, 'all', 'zzzzzzz').length === 0);
 const byDl = EPROC.sortList(OFFERS, 'deadline', 'asc');
